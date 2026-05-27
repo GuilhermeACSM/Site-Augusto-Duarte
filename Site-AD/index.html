@@ -5,18 +5,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="assets/images/Logo-Circular.png" type="image/x-icon">
+
   <title>Augusto Duarte · Pré-candidato a Deputado Estadual SP</title>
+
   <meta name="description"
-    content="Pré-candidato a Deputado Estadual por São Paulo. Ex-Conselheiro Tutelar, ex-Vereador em Santos com dois mandatos e ex-Secretário de Habitação de Santos. Gestão pública experiente, legislador de resultados." />
+    content="Pré-candidato a Deputado Estadual por São Paulo. Ex-Conselheiro Tutelar em Santos, ex-Vereador em Santos (com dois mandatos: 2017/2020 - 2021/2024) e ex-Secretário de Habitação de Santos. Gestão pública experiente, legislador de resultados." />
   <meta property="og:title" content="Augusto Duarte · Pré-candidato a Deputado Estadual SP" />
   <meta property="og:description" content="Quem já fez por Santos, agora vai à Alesp defender a Baixada Santista." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/augusto-brasil.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/style/style.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 </head>
 
@@ -41,14 +45,14 @@
       <nav aria-label="Navegação principal">
         <ul class="nav-principal" role="list">
           <li><a href="index.html" aria-current="page">Início</a></li>
-          <li><a href="sobre.html">Trajetória</a></li>
-          <li><a href="projetos.html">Legado em Santos</a></li>
-          <li><a href="visao.html">Visão Estadual</a></li>
+          <li><a href="pages/trajetoria.html">Trajetória</a></li>
+          <li><a href="pages/projetos.html">Legado em Santos</a></li>
+          <li><a href="pages/visao.html">Visão Estadual</a></li>
         </ul>
       </nav>
 
       <div class="cabecalho-acoes">
-        <a href="voluntario.html" class="botao-principal" id="cabecalho-cta">
+        <a href="pages/voluntario.html" class="botao-principal" id="cabecalho-cta">
           Junte-se à Campanha
         </a>
         <button class="botao-menu" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
@@ -58,11 +62,11 @@
     </div>
 
     <nav id="nav-mobile" class="nav-mobile" aria-label="Navegação mobile" aria-hidden="true">
-      <a href="index.html">Início</a>
-      <a href="sobre.html">Trajetória</a>
-      <a href="projetos.html">Legado em Santos</a>
-      <a href="visao.html">Visão Estadual</a>
-      <a href="voluntario.html" class="botao-principal">Junte-se à Campanha</a>
+      <a href="index.html" aria-current="page">Início</a>
+      <a href="pages/trajetoria.html">Trajetória</a>
+      <a href="pages/projetos.html">Legado em Santos</a>
+      <a href="pages/visao.html">Visão Estadual</a>
+      <a href="pages/voluntario.html" class="botao-principal">Junte-se à Campanha</a>
     </nav>
   </header>
 
@@ -81,7 +85,7 @@
 
           <h1 class="banner-titulo" id="banner-titulo-id">
             Quem já fez<br />
-            por <em>Santos,</em><br />
+            por <em>Santos</em><br />
             vai mais longe.
           </h1>
 
@@ -92,12 +96,12 @@
           </p>
 
           <div class="banner-botoes">
-            <a href="voluntario.html" class="botao-principal">
+            <a href="pages/voluntario.html" class="botao-principal">
               <i class="ph ph-user-plus icone-pequeno"></i>
               Junte-se à Campanha
             </a>
 
-            <a href="sobre.html" class="botao-contorno">
+            <a href="pages/sobre.html" class="botao-contorno">
               Conheça a Trajetória
               <i class="ph ph-arrow-right icone-pequeno" aria-hidden="true"></i>
             </a>
@@ -249,7 +253,7 @@
         </div>
 
         <div class="link-legado">
-          <a href="projetos.html" class="link-seta">
+          <a href="pages/projetos.html" class="link-seta">
             Ver legado completo
             <i class="ph ph-arrow-right icone-pequeno" aria-hidden="true"></i>
           </a>
@@ -306,7 +310,7 @@
         </div>
 
         <div class="link-visao">
-          <a href="visao.html" class="link-seta">
+          <a href="pages/visao.html" class="link-seta">
             Conheça a visão estadual
             <i class="ph ph-arrow-right icone-pequeno" aria-hidden="true"></i>
           </a>
@@ -327,7 +331,7 @@
           A campanha é feita por gente que acredita. Sem fundo partidário público, sem privilégios. Só trabalho.
         </p>
         <div class="faixa-chamada-botoes">
-          <a href="voluntario.html" class="botao-escuro">
+          <a href="pages/voluntario.html" class="botao-escuro">
             Quero Ser Voluntário
             <i class="ph ph-arrow-right icone-pequeno" aria-hidden="true"></i>
           </a>
@@ -365,30 +369,44 @@
       <nav aria-label="Navegação do rodapé">
         <span class="rodape-nav-titulo">Navegação</span>
         <ul class="rodape-nav-lista" role="list">
-          <li><a href="sobre.html">Trajetória</a></li>
-          <li><a href="projetos.html">Legado em Santos</a></li>
-          <li><a href="visao.html">Visão Estadual</a></li>
-          <li><a href="voluntario.html">Junte-se à Campanha</a></li>
+          <li><a href="pages/sobre.html">Trajetória</a></li>
+          <li><a href="pages/projetos.html">Legado em Santos</a></li>
+          <li><a href="pages/visao.html">Visão Estadual</a></li>
+          <li><a href="pages/voluntario.html">Junte-se à Campanha</a></li>
         </ul>
       </nav>
 
-      <aside class="rodape-conexao">
+      <address class="rodape-conexao">
         <span class="rodape-nav-titulo">Conecte-se</span>
         <div class="rodape-social" aria-label="Redes sociais">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <a href="https://www.instagram.com/augustoduarteoficial/" target="_blank" rel="noreferrer"
+            aria-label="Instagram">
             <i class="ph ph-instagram-logo"></i>
           </a>
-          <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+          <a href="https://www.facebook.com/souaugustoduarte" target="_blank" rel="noreferrer" aria-label="Facebook">
             <i class="ph ph-facebook-logo"></i>
-          </a>
-          <a href="mailto:contato@augustoduarte.com.br" aria-label="Enviar e-mail">
-            <i class="ph ph-envelope-simple"></i>
           </a>
         </div>
         <a href="https://novo.org.br" target="_blank" rel="noreferrer" class="rodape-link">→ Jornada NOVO</a>
         <a href="https://novo.org.br/filie-se" target="_blank" rel="noreferrer" class="rodape-link">→ Filie-se ao
           NOVO</a>
-      </aside>
+
+        <div class="rodape-endereco">
+          <div class="rodape-endereco-titulo">
+            <i class="ph ph-map-pin" aria-hidden="true"></i>
+            <span>Comitê de Campanha</span>
+          </div>
+          <p class="rodape-endereco-texto">
+            Rua Azevedo Sodré, 142<br>
+            Santos — SP
+          </p>
+          <a href="https://www.google.com/maps/search/Rua+Azevedo+Sodr%C3%A9+142+Santos+SP" target="_blank"
+            rel="noreferrer" class="rodape-endereco-mapa">
+            <i class="ph ph-navigation-arrow icone-mini" aria-hidden="true"></i>
+            Ver no mapa
+          </a>
+        </div>
+      </address>
 
     </div>
 
@@ -419,19 +437,7 @@
   <!-- ======================================
        Scripts
        ====================================== -->
-  <script>
-    (function () {
-      const toggle = document.querySelector('.botao-menu');
-      const mobileNav = document.getElementById('nav-mobile');
-
-      toggle.addEventListener('click', function () {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        mobileNav.setAttribute('aria-hidden', String(expanded));
-        mobileNav.classList.toggle('aberto', !expanded);
-      });
-    })();
-  </script>
+  <script src="assets/js/menu.js" defer></script>
 
 </body>
 

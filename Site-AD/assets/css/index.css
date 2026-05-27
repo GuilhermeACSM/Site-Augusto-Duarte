@@ -1,0 +1,241 @@
+/* ======================================
+   INDEX.CSS
+   Estilos exclusivos da página inicial (index.html / Home)
+   ====================================== */
+
+
+
+/* ======================================
+   Cards de Trajetória
+   ====================================== */
+.grade-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.card-trajetoria {
+  position: relative;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--color-border);
+  background: var(--color-card);
+  padding: var(--space-8);
+  transition: border-color var(--transition);
+}
+
+@media (hover: hover) {
+  .card-trajetoria:hover {
+    border-color: var(--color-primary);
+  }
+}
+
+.card-trajetoria-numero {
+  position: absolute;
+  top: -18px;
+  left: var(--space-8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--novo-white);
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.card-trajetoria-icone,
+.card-pilar-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(236, 103, 28, 0.1);
+  color: var(--color-primary);
+  margin-bottom: var(--space-5);
+}
+
+.card-trajetoria-icone i,
+.card-pilar-icone i {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.card-trajetoria-etiqueta {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.card-trajetoria-titulo,
+.card-pilar-titulo {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-3);
+}
+
+.card-trajetoria-descricao,
+.card-pilar-descricao {
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ======================================
+   Legado Comprovado
+   ====================================== */
+.grade-legado {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.card-legado {
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--color-border);
+  background: var(--color-card);
+  overflow: hidden;
+}
+
+.card-legado-topo {
+  padding: var(--space-8) var(--space-8) var(--space-4);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.card-legado-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.card-legado-titulo {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+.card-legado-corpo {
+  padding: var(--space-8);
+}
+
+.card-legado-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.card-legado-lista-tag {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.card-legado-lista-texto {
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.card-legado-topo-colorido {
+  background: rgba(236, 103, 28, 0.08);
+  background: color-mix(in srgb, var(--novo-orange) 8%, transparent);
+}
+
+.link-legado,
+.link-visao {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* ======================================
+   Visão Estadual (Cards Pilar)
+   ====================================== */
+.card-pilar {
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--color-border);
+  padding: var(--space-8);
+  transition: border-color var(--transition);
+}
+
+@media (hover: hover) {
+  .card-pilar:hover {
+    border-color: var(--color-primary);
+  }
+}
+
+/* ======================================
+   Chamada para Ação (CTA)
+   ====================================== */
+.secao-chamada {
+  padding-block: var(--space-24);
+}
+
+.faixa-chamada {
+  text-align: center;
+}
+
+.faixa-chamada-tag {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: var(--color-secondary);
+  display: block;
+  margin-bottom: var(--space-5);
+  text-transform: uppercase;
+}
+
+.faixa-chamada-titulo {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  margin-bottom: var(--space-5);
+  color: var(--novo-white);
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.faixa-chamada-descricao {
+  font-size: 1.0625rem;
+  opacity: 0.95;
+  margin-bottom: var(--space-8);
+  max-width: 608px;
+  margin-inline: auto;
+}
+
+.faixa-chamada-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+/* ======================================
+   Responsividade — Desktop (>= 1024px)
+   ====================================== */
+@media (min-width: 1024px) {
+
+
+
+  .grade-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .link-legado,
+  .link-visao {
+    text-align: left;
+  }
+
+  .grade-legado {
+    grid-template-columns: 1fr 1fr;
+  }
+}
