@@ -102,7 +102,7 @@ O site foi projetado com a abordagem **mobile-first**, garantindo uma experiênc
 
 ## 👤 Créditos
 
-- **Design & Desenvolvimento:** Guilherme Augusto C. S. Moreira | Anna Clara Sbrama dos Santos
+- **Design & Desenvolvimento:** Anna Clara Sbrama dos Santos | Guilherme Augusto C. S. Moreira
 - **Candidato:** Augusto Duarte Moreira Neto
 - **Partido:** NOVO 30 — São Paulo
 
