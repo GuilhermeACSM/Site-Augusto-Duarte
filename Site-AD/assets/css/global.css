@@ -16,7 +16,7 @@
 
   /* Tokens Semânticos */
   --color-bg: var(--novo-white);
-  --color-surface: #f5f5f7;
+  --color-surface: #EFF2F5;
   --color-primary: var(--novo-orange);
   --color-secondary: var(--novo-blue);
   --color-text: var(--novo-blue);
@@ -113,6 +113,16 @@ h6,
   letter-spacing: 0.02em;
   text-transform: uppercase;
   line-height: 0.95;
+  font-weight: 400;
+}
+
+/* ======================================
+   Acessibilidade (Foco por Teclado)
+   ====================================== */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 /* ======================================
@@ -171,9 +181,10 @@ h6,
   gap: var(--space-2);
   background: var(--color-primary);
   color: var(--novo-white);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 1rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 14px 24px;
   border: none;
@@ -193,9 +204,10 @@ h6,
   gap: var(--space-2);
   border: 2px solid rgba(255, 255, 255, 0.3);
   color: var(--novo-white);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 0.875rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 14px 24px;
   border-radius: var(--radius-md);
@@ -216,9 +228,10 @@ h6,
   gap: var(--space-2);
   background: var(--color-secondary);
   color: var(--novo-white);
-  font-family: var(--font-display);
-  font-size: 1.0625rem;
-  letter-spacing: 0.15em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 16px 32px;
   border: none;
@@ -238,9 +251,10 @@ h6,
   gap: var(--space-2);
   border: 2px solid var(--color-secondary);
   color: var(--color-secondary);
-  font-family: var(--font-display);
-  font-size: 1.0625rem;
-  letter-spacing: 0.15em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 16px 32px;
   border-radius: var(--radius-md);
@@ -261,7 +275,8 @@ h6,
 /* Link com Seta */
 .link-seta {
   gap: var(--space-2);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-primary);
@@ -341,9 +356,10 @@ h6,
 }
 
 .nav-principal a {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.15em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
   color: var(--color-secondary);
   transition: color var(--transition);
   text-transform: uppercase;
@@ -368,6 +384,8 @@ h6,
 
 #cabecalho-cta {
   display: none;
+  padding: 10px 20px;
+  font-size: 0.8125rem;
 }
 
 /* ======================================
@@ -420,12 +438,17 @@ h6,
 }
 
 .nav-mobile a {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 1.125rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   color: var(--color-secondary);
   text-transform: uppercase;
   transition: color var(--transition);
+}
+
+.nav-mobile a[aria-current="page"] {
+  color: var(--color-primary);
 }
 
 @media (hover: hover) {
@@ -437,6 +460,7 @@ h6,
 .nav-mobile .botao-principal {
   margin-top: var(--space-2);
   text-align: center;
+  color: var(--novo-white);
 }
 
 /* ======================================
@@ -501,9 +525,10 @@ h6,
 }
 
 .secao-tag {
-  font-family: var(--font-display);
-  font-size: 0.8125rem;
-  letter-spacing: 0.3em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
   color: var(--color-primary);
   display: block;
   margin-bottom: var(--space-4);
@@ -558,7 +583,7 @@ h6,
 }
 
 .banner-tag {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.8125rem;
   letter-spacing: 0.3em;
   color: var(--color-primary);
@@ -606,6 +631,10 @@ h6,
   z-index: 1;
   transform-origin: bottom center;
   transform: scale(1.15);
+}
+
+.banner-imagem.escala-menor img {
+  transform: scale(1);
 }
 
 /* ======================================
@@ -681,8 +710,9 @@ h6,
   border: none;
   border-radius: var(--radius-md);
   padding: 10px 20px;
-  font-family: var(--font-display);
-  font-size: 0.8125rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -697,7 +727,8 @@ h6,
 
 /* Navegação do Rodapé */
 .rodape-nav-titulo {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
+  font-weight: bolder;
   font-size: 0.875rem;
   letter-spacing: 0.15em;
   color: var(--novo-orange);
@@ -780,7 +811,8 @@ h6,
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
+  font-weight: bolder;
   font-size: 0.8125rem;
   letter-spacing: 0.15em;
   color: var(--novo-orange);
@@ -831,9 +863,10 @@ h6,
 }
 
 .rodape-inferior-marca {
-  font-family: var(--font-display);
-  font-size: 0.875rem;
-  letter-spacing: 0.2em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
   opacity: 1;
   color: var(--novo-white);
   text-transform: uppercase;
@@ -884,14 +917,16 @@ h6,
    Responsividade — Desktop (>= 1024px)
    ====================================== */
 @media (min-width: 1024px) {
+
   /* Hero com foto — só no desktop */
   .banner-conteudo {
     grid-template-columns: 1fr 1fr;
     padding-top: var(--space-16);
+    align-items: center;
   }
 
   .banner-texto {
-    padding-bottom: var(--space-28);
+    padding-bottom: 0;
   }
 
   .banner-imagem {

@@ -1,0 +1,184 @@
+/* ======================================
+   LEGADO.CSS
+   Estilos específicos da página Legado
+   ====================================== */
+
+.lei-grade {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 900px;
+}
+
+.lei-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--novo-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+@media (hover: hover) {
+  .lei-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* Blocos Laterais (Cores) */
+.lei-lateral {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-secondary);
+}
+
+.lei-lateral-laranja {
+  background: var(--novo-orange);
+}
+
+.lei-lateral-amarelo {
+  background: var(--novo-yellow);
+}
+
+.lei-categoria {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+}
+
+.lei-numero-label {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.lei-numero {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* Área de Conteúdo */
+.lei-conteudo {
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.lei-titulo {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-secondary);
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+}
+
+.lei-subtitulo {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.lei-descricao {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-5);
+}
+
+.lei-status {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--novo-orange);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lei-status i {
+  font-size: 1.125rem;
+}
+
+/* ======================================
+   Grades e Cards Simples (Executivo e Alesp)
+   ====================================== */
+.grade-tres-colunas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.card-simples,
+.card-borda {
+  background: var(--novo-white);
+  padding: var(--space-6) var(--space-8);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-simples {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid transparent;
+}
+
+.card-borda {
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+}
+
+.card-simples-tag {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+}
+
+.card-simples-titulo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+}
+
+.card-simples-descricao {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ======================================
+   Responsividade (Tablet e Desktop)
+   ====================================== */
+@media (min-width: 768px) {
+  .lei-card {
+    flex-direction: row;
+  }
+  
+  .lei-lateral {
+    width: 220px;
+    padding: var(--space-6) var(--space-8);
+  }
+  
+  .grade-tres-colunas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

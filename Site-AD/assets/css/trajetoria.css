@@ -4,62 +4,132 @@
    ====================================== */
 
 .historia {
-  padding-block: var(--space-16) var(--space-20);
-  background: var(--novo-white);
-  color: var(--color-secondary);
+    padding-block: var(--space-16) var(--space-20);
+    background: var(--novo-white);
+    color: var(--color-secondary);
 }
 
 .historia-titulo {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1;
-  text-transform: uppercase;
-  color: var(--color-secondary);
-  margin-bottom: var(--space-12);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-12);
 }
 
 /* Grade de destaques */
 .historia-destaques {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-8);
-  margin-bottom: var(--space-12);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
 }
 
 .destaque-item p {
-  font-size: 0.9375rem; /* 15px, boa legibilidade p/ colunas pequenas */
-  line-height: 1.6;
-  opacity: 0.85;
+    font-size: 0.9375rem;
+    /* 15px, boa legibilidade p/ colunas pequenas */
+    line-height: 1.6;
+    opacity: 0.85;
 }
 
 .destaque-tag {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  color: var(--novo-orange);
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: var(--space-3);
-  font-weight: 700;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    color: var(--novo-orange);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: var(--space-3);
+    font-weight: 700;
 }
 
 /* Texto longo */
 .historia-texto {
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
 }
 
 .historia-texto p {
-  font-size: 1.125rem; /* 18px para leitura confortável no mobile e desktop */
-  line-height: 1.7;
-  opacity: 0.9;
-  text-align: left; /* Respondendo a dúvida: sempre à esquerda para web */
+    font-size: 1.125rem;
+    /* 18px para leitura confortável no mobile e desktop */
+    line-height: 1.7;
+    opacity: 0.9;
+    text-align: left;
+    /* Respondendo a dúvida: sempre à esquerda para web */
 }
 
 .texto-laranja {
+    color: var(--novo-orange);
+    font-weight: 700;
+}
+
+/* ======================================
+   Seção: Linha do Tempo
+   ====================================== */
+.linha-tempo {
+  padding-block: var(--space-20);
+}
+
+.linha-tempo .secao-titulo {
+  margin-bottom: var(--space-12);
+  color: var(--color-secondary);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+}
+
+.linha-tempo-grade {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 900px;
+}
+
+.linha-tempo-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--novo-white);
+  padding: var(--space-6) var(--space-8);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+@media (hover: hover) {
+  .linha-tempo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.linha-tempo-ano {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
   color: var(--novo-orange);
-  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.linha-tempo-conteudo {
+  flex: 1;
+}
+
+.linha-tempo-titulo {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+}
+
+.linha-tempo-descricao {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.5;
 }
 
 /* ======================================
@@ -69,5 +139,18 @@
   .historia-destaques {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-12);
+  }
+
+  .linha-tempo-card {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-8);
+    padding: var(--space-6) var(--space-8);
+  }
+
+  .linha-tempo-ano {
+    margin-bottom: 0;
+    min-width: 80px; /* Alinha todos os anos perfeitamente na mesma coluna */
+    font-size: 1.75rem;
   }
 }

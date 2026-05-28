@@ -41,8 +41,9 @@
   border-radius: 50%;
   background: var(--color-primary);
   color: var(--novo-white);
-  font-family: var(--font-display);
-  font-size: 1rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .card-trajetoria-icone,
@@ -65,9 +66,10 @@
 }
 
 .card-trajetoria-etiqueta {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
   color: var(--color-primary);
   display: block;
   margin-bottom: var(--space-2);
@@ -111,9 +113,10 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
   color: var(--color-primary);
   margin-bottom: var(--space-3);
 }
@@ -135,9 +138,10 @@
 }
 
 .card-legado-lista-tag {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
   color: var(--color-muted);
   display: block;
   margin-bottom: var(--space-1);
@@ -154,7 +158,8 @@
 }
 
 .link-legado,
-.link-visao {
+.link-visao,
+.link-trajetoria {
   margin-top: 40px;
   text-align: center;
 }
@@ -187,9 +192,10 @@
 }
 
 .faixa-chamada-tag {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 1rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.15em;
   color: var(--color-secondary);
   display: block;
   margin-bottom: var(--space-5);
@@ -231,7 +237,8 @@
   }
 
   .link-legado,
-  .link-visao {
+  .link-visao,
+  .link-trajetoria {
     text-align: left;
   }
 
