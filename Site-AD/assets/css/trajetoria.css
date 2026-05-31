@@ -1,68 +1,73 @@
 /* ======================================
    TRAJETORIA.CSS
    Estilos da página de Trajetória
+
+   Criação no dia 05/05/2026
    ====================================== */
 
+/* ======================================
+   Seção: História
+   ====================================== */
 .historia {
-    padding-block: var(--space-16) var(--space-20);
-    background: var(--novo-white);
-    color: var(--color-secondary);
+  padding-block: var(--space-16) var(--space-20);
+  background: var(--novo-white);
+  color: var(--color-secondary);
 }
 
 .historia-titulo {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    line-height: 1;
-    text-transform: uppercase;
-    color: var(--color-secondary);
-    margin-bottom: var(--space-12);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: var(--space-12);
 }
 
 /* Grade de destaques */
 .historia-destaques {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-    margin-bottom: var(--space-12);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
 }
 
 .destaque-item p {
-    font-size: 0.9375rem;
-    /* 15px, boa legibilidade p/ colunas pequenas */
-    line-height: 1.6;
-    opacity: 0.85;
+  font-size: 0.9375rem;
+  /* 15px, boa legibilidade p/ colunas pequenas */
+  line-height: 1.6;
+  opacity: 0.85;
 }
 
 .destaque-tag {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    letter-spacing: 0.2em;
-    color: var(--novo-orange);
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: var(--space-3);
-    font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: var(--novo-orange);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--space-3);
+  font-weight: 700;
 }
 
 /* Texto longo */
 .historia-texto {
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-5);
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
 }
 
 .historia-texto p {
-    font-size: 1.125rem;
-    /* 18px para leitura confortável no mobile e desktop */
-    line-height: 1.7;
-    opacity: 0.9;
-    text-align: left;
-    /* Respondendo a dúvida: sempre à esquerda para web */
+  font-size: 1.125rem;
+  /* 18px para leitura confortável no mobile e desktop */
+  line-height: 1.7;
+  opacity: 0.9;
+  text-align: left;
+  /* Respondendo a dúvida: sempre à esquerda para web */
 }
 
 .texto-laranja {
-    color: var(--novo-orange);
-    font-weight: 700;
+  color: var(--novo-orange);
+  font-weight: 700;
 }
 
 /* ======================================
@@ -150,7 +155,8 @@
 
   .linha-tempo-ano {
     margin-bottom: 0;
-    min-width: 80px; /* Alinha todos os anos perfeitamente na mesma coluna */
+    min-width: 80px;
+    /* Alinha todos os anos perfeitamente na mesma coluna */
     font-size: 1.75rem;
   }
 }

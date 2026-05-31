@@ -1,6 +1,8 @@
 /* ======================================
    GLOBAL.CSS
    Reset · Variáveis · Tipografia · Componentes compartilhados
+
+   Criação no dia 05/05/2026
    ====================================== */
 
 /* ======================================
@@ -48,6 +50,7 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
+  --radius-full: 9999px;
 
   /* Animações e Estrutura */
   --transition: 200ms ease;
@@ -400,6 +403,10 @@ h6,
   cursor: pointer;
   padding: var(--space-2);
   color: var(--color-secondary);
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .botao-menu span {

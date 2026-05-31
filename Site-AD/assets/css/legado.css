@@ -1,8 +1,13 @@
 /* ======================================
    LEGADO.CSS
    Estilos específicos da página Legado
+
+   Criação no dia 05/05/2026
    ====================================== */
 
+/* ======================================
+   Seção: Leis
+   ====================================== */
 .lei-grade {
   display: flex;
   flex-direction: column;
@@ -172,12 +177,12 @@
   .lei-card {
     flex-direction: row;
   }
-  
+
   .lei-lateral {
     width: 220px;
     padding: var(--space-6) var(--space-8);
   }
-  
+
   .grade-tres-colunas {
     grid-template-columns: repeat(3, 1fr);
   }

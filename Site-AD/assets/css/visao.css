@@ -1,0 +1,233 @@
+/* ======================================
+   VISAO.CSS
+   Estilos específicos da página Visão Estadual
+
+   Criação no dia 05/05/2026
+   ====================================== */
+
+/* ======================================
+   Seção: Compromissos / Pilares
+   ====================================== */
+.pilares .secao-cabecalho {
+    margin-bottom: var(--space-12);
+}
+
+.pilares-lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    max-width: 960px;
+}
+
+/* Card de Pilar */
+.pilar-card {
+    background: var(--novo-white);
+    border: none;
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+@media (hover: hover) {
+    .pilar-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+}
+
+/* Cabeçalho do card (número + conteúdo) */
+.pilar-cabecalho {
+    display: flex;
+    gap: var(--space-6);
+    align-items: flex-start;
+}
+
+/* Bloco do número + ícone */
+.pilar-numero-bloco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    flex-shrink: 0;
+}
+
+.pilar-numero {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--novo-orange);
+    line-height: 1;
+}
+
+.pilar-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background: rgba(236, 103, 28, 0.1);
+    color: var(--novo-orange);
+    font-size: 1.25rem;
+}
+
+/* Info (título + descrição) */
+.pilar-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.pilar-titulo {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 1.125rem;
+    letter-spacing: 0.03em;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin-bottom: var(--space-3);
+}
+
+.pilar-descricao {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+}
+
+/* Tags de sub-pautas */
+.pilar-tags {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pilar-tag {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    padding: var(--space-3) var(--space-4);
+    background: rgba(0, 0, 0, 0.04);
+    border: none;
+    border-radius: var(--radius-md);
+    line-height: 1.3;
+    flex: 1;
+    text-align: center;
+}
+
+/* ======================================
+   Seção: Valores do NOVO
+   ====================================== */
+.valores-grade {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+.valor-card {
+    background: var(--novo-white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+@media (hover: hover) {
+    .valor-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+}
+
+.valor-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background: rgba(236, 103, 28, 0.1);
+    color: var(--novo-orange);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-5);
+}
+
+.valor-titulo {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin-bottom: var(--space-3);
+}
+
+.valor-descricao {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+}
+
+/* ======================================
+   Responsividade — Tablet (>= 768px)
+   ====================================== */
+@media (min-width: 768px) {
+    .pilar-tags {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .pilar-tag {
+        flex: 1;
+        text-align: center;
+    }
+
+    .valores-grade {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ======================================
+   Chamada para Ação (CTA)
+   ====================================== */
+.secao-cta {
+    background-color: var(--novo-orange);
+    color: var(--novo-white);
+    padding-block: var(--space-20);
+    text-align: center;
+}
+
+.cta-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+
+.cta-titulo {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: var(--space-4);
+    letter-spacing: 0.02em;
+}
+
+.cta-descricao {
+    font-size: 1.0625rem;
+    margin-bottom: var(--space-8);
+    opacity: 0.9;
+}
+
+.cta-botao {
+    font-size: 0.8125rem;
+    padding: 16px 32px;
+}
