@@ -1,3 +1,5 @@
+[🇧🇷 Português](./README.md) | [🇺🇸 English](./README.en.md)
+
 # 🟠 Augusto Duarte — Site Oficial de Pré-Campanha
 
 > *"Não basta prometer — é preciso entregar."*
