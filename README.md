@@ -100,11 +100,22 @@ Ambos os projetos possuem recursos avançados de acessibilidade:
 
 ---
 
+---
+
 ## 👤 Créditos
 
 - **Design & Desenvolvimento:** Anna Clara Sbrama dos Santos | Guilherme Augusto C. S. Moreira
 - **Candidato:** Augusto Duarte Moreira Neto
 - **Partido:** NOVO 30 — São Paulo
+
+---
+
+## 📄 Licença e Direitos Autorais
+
+Este repositório é público e o código-fonte (estruturas HTML, CSS, e lógicas em JS) pode ser visualizado e utilizado para fins de estudo, portfólio e inspiração estrutural.
+
+No entanto, **todos os direitos autorais sobre a identidade visual, logotipos, imagens, fotografias e textos (copywriting)** pertencem exclusivamente à campanha de Augusto Duarte. 
+- 🚫 **Não é permitido** o uso, cópia ou distribuição da marca, fotos ou textos do candidato para outros fins.
 
 ---
 
