@@ -1,0 +1,170 @@
+/* ======================================
+   Depoimentos (Prova Social - Estilo Netflix)
+   ====================================== */
+.carrossel-wrapper {
+  position: relative;
+  width: 100%;
+  margin: var(--space-6) 0;
+}
+.carrossel-container {
+  width: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--space-4) 4vw; /* Edge-to-edge with 4vw safe area */
+  cursor: grab;
+  border-radius: var(--radius-lg, 8px);
+}
+.carrossel-container:focus-visible {
+  outline: 3px solid var(--novo-orange);
+  outline-offset: 4px;
+}
+.carrossel-trilho {
+  display: flex;
+  gap: var(--space-6);
+  width: max-content;
+  padding-bottom: var(--space-4);
+}
+/* Botões laterais flutuantes (Efeito Netflix) */
+.carrossel-prev,
+.carrossel-next {
+  position: absolute;
+  top: 0;
+  bottom: var(--space-4);
+  z-index: 100; /* Z-index máximo absoluto para sobrepor qualquer widget */
+  width: 6vw;
+  min-width: 50px;
+  border: none;
+  border-radius: 0;
+  color: var(--novo-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s;
+  background: transparent; /* Remove default browser button background */
+}
+[vw] { pointer-events: none; }
+[vw-access-button], [vw-plugin-wrapper] { pointer-events: auto; }
+/* Gradients e Desfoque (Blur) Estilo Netflix */
+.secao-clara .carrossel-prev { 
+  background: linear-gradient(to right, rgba(249, 250, 251, 0.9) 0%, rgba(249, 250, 251, 0) 100%);
+  backdrop-filter: blur(4px);
+}
+.secao-clara .carrossel-next { 
+  background: linear-gradient(to left, rgba(249, 250, 251, 0.9) 0%, rgba(249, 250, 251, 0) 100%);
+  backdrop-filter: blur(4px);
+}
+.secao-neutra .carrossel-prev { 
+  background: linear-gradient(to right, rgba(239, 242, 245, 0.95) 0%, rgba(239, 242, 245, 0) 100%);
+  backdrop-filter: blur(4px);
+}
+.secao-neutra .carrossel-next { 
+  background: linear-gradient(to left, rgba(239, 242, 245, 0.95) 0%, rgba(239, 242, 245, 0) 100%);
+  backdrop-filter: blur(4px);
+}
+body.alto-contraste .carrossel-prev,
+body.alto-contraste .carrossel-next {
+  background: #000;
+  color: #FF0;
+  border: none;
+}
+.carrossel-wrapper:hover .carrossel-prev,
+.carrossel-wrapper:hover .carrossel-next {
+  opacity: 1;
+}
+.carrossel-prev:hover,
+.carrossel-next:hover,
+.carrossel-prev:focus-visible,
+.carrossel-next:focus-visible {
+  opacity: 1;
+  color: var(--novo-blue);
+}
+.carrossel-prev:focus-visible,
+.carrossel-next:focus-visible {
+  outline: 3px solid var(--novo-orange);
+  outline-offset: -3px;
+}
+body.alto-contraste .carrossel-prev:hover, body.alto-contraste .carrossel-next:hover { color: #FFF; }
+.carrossel-prev {
+  left: 0;
+  justify-content: flex-start;
+  padding-left: 1vw;
+}
+.carrossel-next {
+  right: 0;
+  justify-content: flex-end;
+  padding-right: 1vw;
+}
+@media (max-width: 768px) {
+  .carrossel-prev, .carrossel-next {
+    display: none; /* Em telas menores o toque/swipe é mais natural */
+  }
+}
+.depoimento-card {
+  width: 300px;
+  flex-shrink: 0;
+  background: var(--novo-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+@media (min-width: 768px) {
+  .depoimento-card {
+    width: 380px;
+  }
+}
+.depoimento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--novo-orange);
+}
+.depoimento-card i {
+  font-size: 2rem;
+  color: var(--novo-orange);
+  opacity: 0.3;
+}
+.depoimento-texto {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-body);
+  flex-grow: 1;
+  font-style: italic;
+}
+.depoimento-autor {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+.autor-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--novo-blue);
+  color: var(--novo-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+.autor-info {
+  display: flex;
+  flex-direction: column;
+}
+.autor-info strong {
+  font-size: 0.95rem;
+  color: var(--color-secondary);
+}
+.autor-info span {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}

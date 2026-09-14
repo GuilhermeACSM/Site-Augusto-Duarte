@@ -2,20 +2,32 @@
 
 > *"Não basta prometer — é preciso entregar."*
 
-Site institucional do pré-candidato a **Deputado Estadual por São Paulo** pelo partido **NOVO (30)**. Desenvolvido com foco em acessibilidade, performance e identidade visual forte para transmitir a trajetória de quem legislou e governou com responsabilidade.
+Repositório do site institucional do pré-candidato a **Deputado Estadual por São Paulo** pelo partido **NOVO (30)**. Desenvolvido com foco em acessibilidade, performance, SEO e identidade visual forte para transmitir a trajetória de quem legislou e governou com responsabilidade.
+
+Este repositório contém dois projetos distintos, que compartilham a mesma identidade visual e base de código, mas possuem propósitos e tamanhos diferentes:
+
+1. **Site-AD**: O projeto completo e abrangente.
+2. **Site-AD-MVP**: A versão Produto Mínimo Viável (MVP), mais enxuta e direta.
 
 ---
 
-## 🌐 Sobre o Projeto
+## 🌐 Sobre os Projetos
 
-Este projeto é o site oficial da pré-campanha de **Augusto Duarte Moreira Neto** — ex-vereador em Santos, ex-Secretário Municipal de Habitação e agora pré-candidato a Deputado Estadual.
+O objetivo de ambos os sites é apresentar ao eleitor a trajetória, o legado, a visão e incentivar a participação na pré-campanha de **Augusto Duarte Moreira Neto**.
 
-O objetivo é apresentar ao eleitor:
+### 1. Site-AD (Projeto Completo)
+A versão completa do site, contendo todas as páginas e seções de engajamento da campanha, incluindo:
+- **Páginas exclusivas**: Últimas Notícias, Agenda, Depoimentos, Galeria, Materiais, Ouvidoria e Área Restrita.
+- **Seções detalhadas**: Hero completo, navegação extensa, formulário de Newsletter no rodapé, e histórico rico sobre o candidato.
+- **Estrutura**: Todas as subpáginas estão organizadas dentro da pasta `/pages/`.
 
-- **A trajetória** — do plenário à gestão pública, e da gestão à Alesp.
-- **O legado comprovado** — leis aprovadas, resultados na Secretaria de Habitação e entregas reais.
-- **A visão estadual** — pautas que o candidato defende para São Paulo.
-- **O convite à participação** — para voluntários, apoiadores e cidadãos que compartilham os mesmos valores.
+### 2. Site-AD-MVP (Produto Mínimo Viável)
+Uma versão otimizada, focada estritamente na conversão rápida e na entrega da mensagem principal. Ideal para lançamentos iniciais ou campanhas focadas em tráfego rápido.
+- **Páginas reduzidas**: Contém apenas as páginas fundamentais (Início, Trajetória, Legado, Visão Estadual, Voluntário, Privacidade, Mapa do Site e Acessibilidade).
+- **Seções enxutas**: Removeu áreas dinâmicas ou que requerem atualização constante (Notícias, Depoimentos, Newsletter), substituindo-as por uma seção de convite direto para as **Redes Sociais** ("Minha TV é a Internet").
+- **Estrutura**: Para facilitar hospedagem simples, todas as páginas ficam na pasta raiz (`/`).
+
+> **Nota:** As melhorias de SEO (Meta tags, JSON-LD, Twitter Cards), ferramentas avançadas de acessibilidade, Modal de boas-vindas e novos layouts visuais de seções introduzidas no MVP foram retrocompatibilizadas e incorporadas ao **Site-AD**.
 
 ---
 
@@ -23,67 +35,53 @@ O objetivo é apresentar ao eleitor:
 
 | Tecnologia | Finalidade |
 |---|---|
-| **HTML5** | Estrutura semântica com tags modernas (`<main>`, `<article>`, `<time>`, `<address>`) |
+| **HTML5** | Estrutura semântica com tags modernas (`<main>`, `<article>`, `<time>`, `<address>`) e Otimização para SEO (Schema.org) |
 | **CSS3** | Design system com variáveis (Custom Properties), Flexbox, Grid e responsividade mobile-first |
-| **JavaScript** | Menu mobile com acessibilidade (ARIA) |
+| **JavaScript** | Menu mobile, controle do Modal, Aceite de Cookies (LGPD) e Menu de Acessibilidade (ARIA) |
 | **Google Fonts** | Tipografia premium — Bebas Neue (títulos) + Inter (corpo) |
 | **Phosphor Icons** | Iconografia moderna e consistente |
 
-> **Zero frameworks. Zero dependências de build.** O site é puramente estático — leve, rápido e hospedável em qualquer servidor.
+> **Zero frameworks. Zero dependências de build.** Os sites são puramente estáticos — leves, rápidos e hospedáveis em qualquer servidor.
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura do Repositório
 
 ```
-Site-AD/
-├── index.html                  ← Página inicial (Home)
-├── pages/
-│   ├── trajetoria.html         ← Trajetória política
-│   ├── legado.html             ← Legado em Santos
-│   ├── visao.html              ← Visão Estadual (em breve)
-│   └── voluntario.html         ← Junte-se à Campanha (em breve)
-├── assets/
-│   ├── css/
-│   │   ├── global.css          ← Design system (tokens, reset, componentes globais)
-│   │   ├── index.css           ← Estilos específicos da Home
-│   │   ├── trajetoria.css      ← Estilos específicos da Trajetória
-│   │   └── legado.css          ← Estilos específicos do Legado
-│   ├── js/
-│   │   └── menu.js             ← Lógica do menu hambúrguer (mobile)
-│   └── images/                 ← Fotos, logotipos e assets visuais
+Site-Augusto-Duarte/
+├── Site-AD/                    ← Versão Completa do Site
+│   ├── index.html
+│   ├── pages/                  ← (Todas as 14 subpáginas)
+│   └── assets/                 ← (CSS, Imagens, JS e Fontes)
+│
+└── Site-AD-MVP/                ← Versão Mínima Viável (MVP)
+    ├── index.html
+    ├── trajetoria.html         ← (Subpáginas na raiz)
+    ├── voluntario.html
+    └── assets/                 ← (CSS, Imagens, JS e Fontes)
 ```
 
 ---
 
 ## 🎨 Design System
 
-O projeto foi construído sobre um **Design System próprio** com tokens semânticos reutilizáveis:
-
+Os projetos foram construídos sobre um **Design System próprio** com tokens semânticos reutilizáveis:
 - **Paleta de cores:** Laranja NOVO, Azul Institucional, Amarelo, Verde e Branco
 - **Tipografia:** Bebas Neue para títulos de impacto, Inter para leitura confortável
 - **Espaçamento:** Escala harmônica com variáveis (`--space-2` até `--space-28`)
-- **Componentes:** Botões, cards, seções, banners e navegação — tudo reutilizável entre páginas
+- **Componentes:** Botões, cards, seções, banners e navegação — reutilizáveis entre páginas
 
 ---
 
-## ♿ Acessibilidade
+## ♿ Acessibilidade e SEO
 
-- Skip link para navegação por teclado
-- Atributos ARIA em todos os elementos interativos
-- Texto alternativo em todas as imagens
-- Contraste de cores validado
-- Fontes responsivas com `clamp()` para leitura confortável em qualquer dispositivo
-
----
-
-## 📱 Responsividade
-
-O site foi projetado com a abordagem **mobile-first**, garantindo uma experiência impecável em:
-
-- 📱 **Celulares** — layout empilhado, menu hambúrguer, fontes ampliadas
-- 📟 **Tablets** — grades intermediárias, navegação adaptada
-- 🖥️ **Desktops** — layout completo com foto no banner, navegação horizontal e rodapé em colunas
+Ambos os projetos possuem recursos avançados de acessibilidade:
+- Menu Flutuante de Acessibilidade (Contraste escuro/claro, Fonte para dislexia, Espaçamento, Cursor, Destacar Links)
+- VLibras Integrado
+- Filtros de Daltonismo (Protanopia, Deuteranopia, Tritanopia) em SVG
+- Skip link para navegação por teclado e Atributos ARIA
+- Texto alternativo validado em todas as imagens
+- Integração completa com metatags (Open Graph, Twitter Cards) e `application/ld+json`
 
 ---
 
@@ -94,9 +92,11 @@ O site foi projetado com a abordagem **mobile-first**, garantindo uma experiênc
    git clone https://github.com/GuilhermeACSM/Site-Augusto-Duarte.git
    ```
 
-2. Abra o arquivo `Site-AD/index.html` no navegador.
+2. Escolha o projeto e abra o arquivo `index.html` no navegador:
+   - Para o completo: `Site-AD/index.html`
+   - Para o MVP: `Site-AD-MVP/index.html`
 
-> Não é necessário instalar nada. O projeto é 100% estático.
+> Não é necessário instalar dependências como npm ou yarn para rodar a aplicação em si. O projeto é 100% estático.
 
 ---
 

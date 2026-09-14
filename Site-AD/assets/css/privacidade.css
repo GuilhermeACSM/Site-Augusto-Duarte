@@ -1,0 +1,80 @@
+/* ======================================
+   Banner de Privacidade
+   ====================================== */
+.banner-privacidade {
+  position: relative;
+  background: linear-gradient(135deg, var(--novo-orange) 0%, #cc5200 100%);
+  color: var(--novo-white);
+  padding: 4rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+.banner-privacidade .banner-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 0;
+}
+.banner-privacidade .banner-tag {
+  display: inline-block;
+  background: var(--novo-white);
+  color: var(--novo-orange);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.banner-privacidade .banner-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.banner-privacidade .banner-descricao {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+.privacidade-conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  color: var(--text-base);
+  line-height: 1.8;
+}
+.privacidade-conteudo h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--novo-blue);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.privacidade-conteudo h3 {
+  font-size: 1.25rem;
+  color: var(--novo-blue-dark);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.privacidade-conteudo p {
+  margin-bottom: 1rem;
+}
+.privacidade-conteudo ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+.privacidade-conteudo li {
+  margin-bottom: 0.5rem;
+}
+.data-atualizacao {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 1rem;
+}

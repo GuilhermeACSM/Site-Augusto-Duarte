@@ -1,371 +1,668 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="../assets/images/webp/Logo-Circular.webp" rel="icon" type="image/webp">
+  <title>Augusto Duarte · Visão Estadual</title>
+  <meta content="Conheça a visão de Augusto Duarte para o estado de São Paulo. Ex-Conselheiro Tutelar, ex-Vereador em Santos e ex-Secretário de Habitação. Trabalho sério e compromisso com o cidadão." name="description">
+  
+  
+  
+  
+  <link href="../assets/css/global.css" rel="stylesheet">
+  <link href="../assets/css/visao.css" rel="stylesheet">
+  <link href="../assets/css/fonts.css" rel="stylesheet">
+  <link href="../assets/css/phosphor.css" rel="stylesheet">
+  <link href="../assets/css/acessibilidade.css" rel="stylesheet">
+  <link href="../assets/css/carrossel.css" rel="stylesheet">
+  <link href="../assets/css/loader.css" rel="stylesheet">
+  <link href="../assets/css/modal.css" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../assets/images/.webp/Logo-Circular.webp" type="image/x-icon">
+  <link rel="canonical" href="https://www.augustoduarte.com.br/pages/visao.html">
+  <meta name="robots" content="index, follow">
 
-    <title>Augusto Duarte · Visão Estadual</title>
+  <meta content="website" property="og:type">
+  <meta content="https://www.augustoduarte.com.br/pages/visao.html" property="og:url">
+  <meta content="Augusto Duarte · Candidato a Deputado Estadual SP" property="og:title">
+  <meta content="Quem já fez por Santos, agora vai à Alesp defender a Baixada Santista." property="og:description">
+  <meta content="https://www.augustoduarte.com.br/assets/images/webp/Imagem-Augusto-Duarte-Links.webp" property="og:image">
 
-    <meta name="description"
-        content="Conheça a visão de Augusto Duarte para o estado de São Paulo. Ex-Conselheiro Tutelar, ex-Vereador em Santos e ex-Secretário de Habitação. Trabalho sério e compromisso com o cidadão." />
-    <meta property="og:title" content="Augusto Duarte · Visão Estadual" />
-    <meta property="og:description" content="Trabalho sério, entrega comprovada e compromisso com quem paga a conta." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="../assets/images/.webp/Imagem-Augusto-Duarte-Links.webp" />
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.augustoduarte.com.br/pages/visao.html">
+  <meta property="twitter:title" content="Augusto Duarte · Candidato a Deputado Estadual SP">
+  <meta property="twitter:description" content="Quem já fez por Santos, agora vai à Alesp defender a Baixada Santista.">
+  <meta property="twitter:image" content="https://www.augustoduarte.com.br/assets/images/webp/Imagem-Augusto-Duarte-Links.webp">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/global.css" />
-    <link rel="stylesheet" href="../assets/css/visao.css" />
-    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Augusto Duarte",
+    "jobTitle": "Candidato a Deputado Estadual",
+    "url": "https://www.augustoduarte.com.br/",
+    "image": "https://www.augustoduarte.com.br/assets/images/webp/Imagem-Augusto-Duarte-Links.webp",
+    "description": "Candidato a Deputado Estadual por São Paulo. Ex-Conselheiro Tutelar em Santos, ex-Vereador em Santos e ex-Secretário de Habitação de Santos.",
+    "sameAs": [
+      "https://www.instagram.com/augustoduarteoficial/",
+      "https://www.facebook.com/souaugustoduarte"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-    <a href="#main-content" class="sr-only" id="skip-link">Pular para o conteúdo</a>
 
-    <!-- ======================================
+<!-- Filtros SVG de Acessibilidade (Daltonismo) -->
+  <svg class="svg-filtros" aria-hidden="true" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="protanopia">
+        <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0  0.558, 0.442, 0, 0, 0  0, 0.242, 0.758, 0, 0  0, 0, 0, 1, 0"></feColorMatrix>
+      </filter>
+      <filter id="deuteranopia">
+        <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0  0.7, 0.3, 0, 0, 0  0, 0.3, 0.7, 0, 0  0, 0, 0, 1, 0"></feColorMatrix>
+      </filter>
+      <filter id="tritanopia">
+        <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0  0, 0.433, 0.567, 0, 0  0, 0.475, 0.525, 0, 0  0, 0, 0, 1, 0"></feColorMatrix>
+      </filter>
+      <filter id="acromatopsia">
+        <feColorMatrix type="matrix" values="0.299, 0.587, 0.114, 0, 0  0.299, 0.587, 0.114, 0, 0  0.299, 0.587, 0.114, 0, 0  0, 0, 0, 1, 0"></feColorMatrix>
+      </filter>
+    </defs>
+  </svg>
+  <!-- Barra Superior de Acessibilidade (eMAG) -->
+  <div class="a11y-topbar">
+    <div class="container">
+      <div class="a11y-topbar-left">
+        <a href="#conteudo-principal" class="a11y-skip-link" accesskey="1">Ir para o conteúdo (Alt+1)</a>
+        <a href="#menu-principal" class="a11y-skip-link" accesskey="2">Ir para o menu (Alt+2)</a>
+        <a href="#rodape-principal" class="a11y-skip-link" accesskey="3">Ir para o rodapé (Alt+3)</a>
+      </div>
+      <div class="a11y-topbar-right">
+        <button class="a11y-topbar-btn" id="top-btn-fonte-aumentar" title="Aumentar Fonte" aria-label="Aumentar Fonte">A+</button>
+        <button class="a11y-topbar-btn" id="top-btn-fonte-diminuir" title="Diminuir Fonte" aria-label="Diminuir Fonte">A-</button>
+        <button class="a11y-topbar-btn" id="top-btn-alto-contraste" title="Alto Contraste" aria-label="Alternar Alto Contraste" aria-pressed="false"><i class="ph ph-circle-half-tilt" aria-hidden="true"></i> <span class="texto-a11y-btn">Contraste</span></button>
+        <button class="a11y-topbar-btn" id="top-btn-daltonismo" title="Escala de Cinza" aria-label="Alternar Escala de Cinza" aria-pressed="false"><i class="ph ph-eye" aria-hidden="true"></i> <span class="texto-a11y-btn">Escala de Cinza</span></button>
+        <button class="a11y-topbar-btn" id="top-btn-animacoes" title="Parar Animações" aria-label="Parar Animações"><i class="ph ph-play-pause" aria-hidden="true"></i> <span class="texto-a11y-btn">Animações</span></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/loader.js"></script>
+  <div class="skeleton-overlay" id="skeleton-overlay">
+    <div class="skeleton-header">
+      <div class="skeleton-element skeleton-logo"></div>
+      <div class="skeleton-element skeleton-nav"></div>
+    </div>
+    <div class="skeleton-body">
+      <div class="skeleton-element skeleton-title"></div>
+      <div class="skeleton-element skeleton-text"></div>
+      <div class="skeleton-element skeleton-text short"></div>
+      <div class="skeleton-cards">
+        <div class="skeleton-element skeleton-card"></div>
+        <div class="skeleton-element skeleton-card"></div>
+        <div class="skeleton-element skeleton-card"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================
        Cabeçalho (Header)
        ====================================== -->
-    <header class="cabecalho" role="banner">
-        <div class="container cabecalho-conteudo">
+  <header class="cabecalho" role="banner" id="menu-principal">
+    <div class="container cabecalho-conteudo">
+      <a aria-label="Augusto Duarte — Página Inicial" class="cabecalho-logo" href="../index.html">
+        <img alt="Logo Oficial Augusto Duarte - Campanha para Deputado Estadual 30633" src="../assets/images/webp/ad-logo.webp">
+        <span aria-hidden="true" class="cabecalho-logo-divisor"></span>
+        <span class="cabecalho-logo-texto">
+          <strong>AUGUSTO DUARTE</strong>
+          <span class="logo-subtitulo">DEPUTADO ESTADUAL 30633</span>
+        </span>
+      </a>
+      <div class="cabecalho-acoes">
 
-            <a href="../index.html" class="cabecalho-logo" aria-label="Augusto Duarte — Página Inicial">
-                <img src="../assets/images/.webp/ad-logo.webp" alt="Logo Augusto Duarte">
-                <span class="cabecalho-logo-divisor" aria-hidden="true"></span>
-                <span class="cabecalho-logo-texto">
-                    <span class="cabecalho-logo-nome">Augusto Duarte</span>
-                    <span class="cabecalho-logo-sub">Deputado Estadual · NOVO 30</span>
-                </span>
-            </a>
-
-            <nav aria-label="Navegação principal">
-                <ul class="nav-principal" role="list">
-                    <li><a href="../index.html">Início</a></li>
-                    <li><a href="trajetoria.html">Trajetória</a></li>
-                    <li><a href="legado.html">Legado em Santos</a></li>
-                    <li><a href="visao.html" aria-current="page">Visão Estadual</a></li>
-                </ul>
-            </nav>
-
-            <div class="cabecalho-acoes">
-                <a href="voluntario.html" class="botao-principal" id="cabecalho-cta">
-                    Junte-se à Campanha
-                </a>
-                <button class="botao-menu" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+        <a class="botao-principal" href="voluntario.html" id="cabecalho-cta">
+          Junte-se à Campanha
+        </a>
+        <button aria-controls="nav-mobile" aria-expanded="false" aria-label="Abrir menu" class="botao-menu">
+          <span class="botao-menu-texto">MENU</span>
+          <div class="botao-menu-barras">
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+    <nav aria-hidden="true" aria-label="Navegação mobile" class="nav-mobile" id="nav-mobile">
+      <div class="nav-mobile-container">
+        <div class="nav-mobile-grupo">
+          <span class="nav-mobile-titulo">Conheça</span>
+          <a href="../index.html">Início</a>
+          <a href="trajetoria.html">Trajetória</a>
+          <a href="legado.html">Legado</a>
+          <a href="visao.html" aria-current="page">Visão Estadual</a>
         </div>
+        <div class="nav-mobile-grupo">
+          <span class="nav-mobile-titulo">Participe</span>
+          <a href="voluntario.html">Seja Voluntário</a>
+          <a href="ouvidoria.html">Ouvidoria</a>
+          <a href="materiais.html">Materiais</a>
+        </div>
+        <div class="nav-mobile-grupo">
+          <span class="nav-mobile-titulo">Acompanhe</span>
+          <a href="noticias.html">Notícias</a>
+          <a href="agenda.html">Agenda</a>
+          <a href="depoimentos.html">Depoimentos</a>
+          <a href="galeria.html">Galeria</a>
+        </div>
+        <div class="nav-mobile-grupo">
+          <span class="nav-mobile-titulo">Navegação</span>
+          <a href="acessibilidade-info.html">Acessibilidade</a>
+          <a href="mapa.html">Mapa do Site</a>
+          <a href="privacidade.html">Privacidade</a>
+        </div>
+        <div class="nav-mobile-acoes">
 
-        <nav id="nav-mobile" class="nav-mobile" aria-label="Navegação mobile" aria-hidden="true">
-            <a href="../index.html">Início</a>
-            <a href="trajetoria.html">Trajetória</a>
-            <a href="legado.html">Legado em Santos</a>
-            <a href="visao.html" aria-current="page">Visão Estadual</a>
-            <a href="voluntario.html" class="botao-principal">Junte-se à Campanha</a>
-        </nav>
-    </header>
-
-    <!-- ======================================
+          <a class="botao-principal btn-mobile-junte-se" href="voluntario.html">Junte-se à Campanha</a>
+        </div>
+    </div></nav>
+  </header>
+  <!-- ======================================
        Main
        ====================================== -->
-    <main id="main-content">
-        <!-- ======================================
+  <main id="conteudo-principal" role="main">
+    <!-- ======================================
+         Breadcrumb
+         ====================================== -->
+    <nav aria-label="Breadcrumb" class="breadcrumb-container">
+      <div class="container">
+        <ol class="breadcrumb-lista">
+          <li><a href="../index.html">Início</a></li>
+          <li aria-current="page">Visão Estadual</li>
+        </ol>
+      </div>
+    </nav>
+    <!-- ======================================
          Banner Principal (Hero)
          ====================================== -->
-        <section class="banner" id="inicio" aria-labelledby="banner-titulo-id">
-            <div class="container banner-conteudo">
-                <div class="banner-texto">
-                    <span class="banner-tag">Visão Estadual</span>
-
-                    <h1 class="banner-titulo" id="banner-titulo-id">
-                        São Paulo<br />
-                        Precisa de<br />
-                        <em>menos<br />
-                            política</em><br />
-                        e mais <br />
-                        resultado.
-                    </h1>
-
-                    <p class="banner-descricao">
-                        Augusto leva à Alesp a mesma régua que aplicou em Santos: gestão eficiente, respeito ao pagador
-                        de impostos e coragem para enfrentar a velha política.
-                    </p>
-                </div>
-
-                <div class="banner-imagem escala-menor">
-                    <img src="../assets/images/.webp/augusto-sp.webp"
-                        alt="Augusto Duarte com as mãos juntas, olhando confiante para a câmera" />
-                </div>
-            </div>
-
-            <div class="faixa-cores" aria-hidden="true">
-                <div class="faixa-cores-laranja"></div>
-                <div class="faixa-cores-amarelo"></div>
-                <div class="faixa-cores-verde"></div>
-                <div class="faixa-cores-branco"></div>
-            </div>
-        </section>
-
-        <!-- ======================================
+    <section aria-labelledby="banner-titulo-id" class="banner" id="inicio">
+      <div class="container banner-conteudo banner-conteudo-centralizado">
+        <div class="banner-texto reveal-left">
+          <span class="banner-tag">Visão Estadual</span>
+          <h1 class="banner-titulo" id="banner-titulo-id">
+            São Paulo<br>
+            precisa de<br>
+            <em>menos política</em><br>
+            e mais resultado.
+          </h1>
+          <p class="banner-descricao">
+            Augusto leva à Alesp a mesma régua que aplicou em Santos: gestão eficiente, respeito ao pagador
+            de impostos e coragem para enfrentar a velha política.
+          </p>
+        </div>
+        <div class="banner-imagem escala-menor reveal-right">
+          <img alt="Augusto Duarte vestindo a camisa do partido NOVO e usando a bandeira do Brasil como capa, segurando-a com ambas as mãos em posição de poder." src="../assets/images/webp/banner_visao.webp">
+        </div>
+      </div>
+      <div aria-hidden="true" class="faixa-cores">
+        <div class="faixa-cores-laranja"></div>
+        <div class="faixa-cores-amarelo"></div>
+        <div class="faixa-cores-verde"></div>
+        <div class="faixa-cores-branco"></div>
+      </div>
+    </section>
+    <!-- ======================================
          Seção: Compromissos Firmes (3 Pilares)
          ====================================== -->
-        <section class="secao secao-clara pilares" aria-labelledby="pilares-titulo-id">
-            <div class="container">
-                <header class="secao-cabecalho">
-                    <span class="secao-tag">Os 3 Pilares</span>
-                    <h2 class="secao-titulo" id="pilares-titulo-id">Compromissos firmes<br>para o mandato<br>estadual
-                    </h2>
-                </header>
-
-                <div class="pilares-lista">
-
-                    <!-- Pilar 01 -->
-                    <article class="pilar-card">
-                        <div class="pilar-cabecalho">
-                            <div class="pilar-numero-bloco">
-                                <span class="pilar-numero">01</span>
-                                <div class="pilar-icone" aria-hidden="true">
-                                    <i class="ph ph-scales"></i>
-                                </div>
-                            </div>
-                            <div class="pilar-info">
-                                <h3 class="pilar-titulo">Enxugar a máquina pública</h3>
-                                <p class="pilar-descricao">
-                                    Cada cargo comissionado, cada secretaria inflada, cada gasto sem retorno é dinheiro
-                                    tirado de quem trabalha. O estado precisa custar menos e entregar mais. Defenderemos
-                                    teto de gastos rígido, fim de privilégios e auditoria contínua.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="pilar-tags">
-                            <span class="pilar-tag">Revisão de cargos comissionados</span>
-                            <span class="pilar-tag">Fim de aumentos abusivos</span>
-                            <span class="pilar-tag">Auditoria pública dos órgãos estaduais</span>
-                        </div>
-                    </article>
-
-                    <!-- Pilar 02 -->
-                    <article class="pilar-card">
-                        <div class="pilar-cabecalho">
-                            <div class="pilar-numero-bloco">
-                                <span class="pilar-numero">02</span>
-                                <div class="pilar-icone" aria-hidden="true">
-                                    <i class="ph ph-chart-line-up"></i>
-                                </div>
-                            </div>
-                            <div class="pilar-info">
-                                <h3 class="pilar-titulo">Liberdade econômica para São Paulo crescer</h3>
-                                <p class="pilar-descricao">
-                                    Quem empreende em SP enfrenta uma muralha de burocracia e impostos. Vamos lutar pela
-                                    simplificação tributária estadual, pela desregulamentação inteligente e pela
-                                    proteção
-                                    do pequeno e médio negócio — o motor real da nossa economia.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="pilar-tags">
-                            <span class="pilar-tag">Simplificação de obrigações estaduais</span>
-                            <span class="pilar-tag">Defesa do pequeno empreendedor</span>
-                            <span class="pilar-tag">Ambiente favorável a investimento</span>
-                        </div>
-                    </article>
-
-                    <!-- Pilar 03 -->
-                    <article class="pilar-card">
-                        <div class="pilar-cabecalho">
-                            <div class="pilar-numero-bloco">
-                                <span class="pilar-numero">03</span>
-                                <div class="pilar-icone" aria-hidden="true">
-                                    <i class="ph ph-anchor"></i>
-                                </div>
-                            </div>
-                            <div class="pilar-info">
-                                <h3 class="pilar-titulo">Defesa intransigente da Baixada Santista</h3>
-                                <p class="pilar-descricao">
-                                    Porto, túnel submerso, mobilidade regional, saúde de alta complexidade, segurança
-                                    nas
-                                    divisas. A Baixada gera riqueza para todo o estado e merece uma voz que conheça seus
-                                    desafios de perto. Augusto será essa voz.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="pilar-tags">
-                            <span class="pilar-tag">Infraestrutura portuária e logística</span>
-                            <span class="pilar-tag">Saúde regional integrada</span>
-                            <span class="pilar-tag">Segurança pública na orla e no continente</span>
-                        </div>
-                    </article>
-
-                </div>
+    <section aria-labelledby="pilares-titulo-id" class="secao secao-clara pilares">
+      <div class="container reveal">
+        <header class="secao-cabecalho reveal-up" role="banner">
+          <span class="secao-tag">MINHAS PAUTAS</span>
+          <h2 class="secao-titulo" id="pilares-titulo-id">Compromissos reais<br>com a sociedade</h2>
+          <div class="bandeiras-container">
+            <span class="bandeira-tag"><i class="ph ph-magnifying-glass"></i> Fiscalização</span>
+            <span class="bandeira-tag"><i class="ph ph-wheelchair"></i> Acessibilidade</span>
+            <span class="bandeira-tag"><i class="ph ph-briefcase"></i> Empregabilidade</span>
+          </div>
+        </header>
+        <div class="pilares-lista">
+          <!-- Pauta 01 -->
+          <article class="pilar-card reveal-up">
+            <div class="pilar-cabecalho">
+              <div class="pilar-numero-bloco">
+                <span class="pilar-numero">01</span>
+                <div aria-hidden="true" class="pilar-icone"><i class="ph ph-brain"></i></div>
+              </div>
+              <div class="pilar-info">
+                <h3 class="pilar-titulo">Autismo e Neurodiversidade</h3>
+                <p class="pilar-descricao">Ampliar o diagnóstico precoce, o acesso a terapias, a inclusão escolar e o
+                  suporte às famílias, promovendo respeito e qualidade de vida para as pessoas com TEA.</p>
+              </div>
             </div>
-        </section>
-
-        <!-- ======================================
+          </article>
+          <!-- Pauta 02 -->
+          <article class="pilar-card reveal-up reveal-delay-1">
+            <div class="pilar-cabecalho">
+              <div class="pilar-numero-bloco">
+                <span class="pilar-numero">02</span>
+                <div aria-hidden="true" class="pilar-icone"><i class="ph ph-wheelchair"></i></div>
+              </div>
+              <div class="pilar-info">
+                <h3 class="pilar-titulo">Acessibilidade e Inclusão</h3>
+                <p class="pilar-descricao">Garantir que pessoas com deficiência tenham acesso pleno aos serviços
+                  públicos, transporte, educação, saúde e oportunidades de trabalho.</p>
+              </div>
+            </div>
+          </article>
+          <!-- Pauta 03 -->
+          <article class="pilar-card reveal-up reveal-delay-2">
+            <div class="pilar-cabecalho">
+              <div class="pilar-numero-bloco">
+                <span class="pilar-numero">03</span>
+                <div aria-hidden="true" class="pilar-icone"><i class="ph ph-house-line"></i></div>
+              </div>
+              <div class="pilar-info">
+                <h3 class="pilar-titulo">Habitação de Interesse Social</h3>
+                <p class="pilar-descricao">Lutar pela ampliação de programas habitacionais, regularização fundiária e
+                  acesso à moradia digna para as famílias que mais precisam.</p>
+              </div>
+            </div>
+          </article>
+          <!-- Pauta 04 -->
+          <article class="pilar-card reveal-up reveal-delay-3">
+            <div class="pilar-cabecalho">
+              <div class="pilar-numero-bloco">
+                <span class="pilar-numero">04</span>
+                <div aria-hidden="true" class="pilar-icone"><i class="ph ph-shield-check"></i></div>
+              </div>
+              <div class="pilar-info">
+                <h3 class="pilar-titulo">Segurança Pública</h3>
+                <p class="pilar-descricao">Defender investimentos em tecnologia, iluminação pública, monitoramento, prevenção à violência e integração entre as forças de segurança.</p>
+              </div>
+            </div>
+          </article>
+          <!-- Pauta 05 -->
+          <article class="pilar-card reveal-up reveal-delay-4">
+            <div class="pilar-cabecalho">
+              <div class="pilar-numero-bloco">
+                <span class="pilar-numero">05</span>
+                <div aria-hidden="true" class="pilar-icone"><i class="ph ph-briefcase"></i></div>
+              </div>
+              <div class="pilar-info">
+                <h3 class="pilar-titulo">Empregabilidade e Desenvolvimento</h3>
+                <p class="pilar-descricao">Incentivar a geração de empregos, a qualificação profissional, o empreendedorismo e a atração de novas empresas para a região.</p>
+              </div>
+            </div>
+          </article>
+          <!-- Pauta 06 -->
+          <article class="pilar-card reveal-up reveal-delay-5">
+            <div class="pilar-cabecalho">
+              <div class="pilar-numero-bloco">
+                <span class="pilar-numero">06</span>
+                <div aria-hidden="true" class="pilar-icone"><i class="ph ph-magnifying-glass"></i></div>
+              </div>
+              <div class="pilar-info">
+                <h3 class="pilar-titulo">Transparência e Gestão Eficiente</h3>
+                <p class="pilar-descricao">Garantir que cada centavo do pagador de impostos seja investido com responsabilidade, combatendo desperdícios e a burocracia.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================
          Seção: Valores do NOVO
          ====================================== -->
-        <section class="secao secao-neutra valores" aria-labelledby="valores-titulo-id">
-            <div class="container">
-                <header class="secao-cabecalho">
-                    <span class="secao-tag">Os Valores do NOVO</span>
-                    <h2 class="secao-titulo" id="valores-titulo-id">Coerência da<br>militância à<br>legislatura</h2>
-                </header>
-
-                <div class="valores-grade">
-
-                    <!-- Valor 1 -->
-                    <article class="valor-card">
-                        <div class="valor-icone" aria-hidden="true">
-                            <i class="ph ph-shield-check"></i>
-                        </div>
-                        <h3 class="valor-titulo">Sem fundo partidário público</h3>
-                        <p class="valor-descricao">
-                            Campanha custeada por quem acredita — não pelo contribuinte.
-                        </p>
-                    </article>
-
-                    <!-- Valor 2 -->
-                    <article class="valor-card">
-                        <div class="valor-icone" aria-hidden="true">
-                            <i class="ph ph-bank"></i>
-                        </div>
-                        <h3 class="valor-titulo">Sem privilégios</h3>
-                        <p class="valor-descricao">
-                            Recusa de mordomias, supersalários e aposentadorias especiais.
-                        </p>
-                    </article>
-
-                    <!-- Valor 3 -->
-                    <article class="valor-card">
-                        <div class="valor-icone" aria-hidden="true">
-                            <i class="ph ph-users-three"></i>
-                        </div>
-                        <h3 class="valor-titulo">Compromisso com o cidadão</h3>
-                        <p class="valor-descricao">
-                            Mandato aberto, fiscalizável e prestador de contas — sempre.
-                        </p>
-                    </article>
-
-                </div>
+    <section aria-labelledby="valores-titulo-id" class="secao secao-neutra valores">
+      <div class="container reveal">
+        <header class="secao-cabecalho reveal-up" role="banner">
+          <span class="secao-tag">Os Valores do NOVO</span>
+          <h2 class="secao-titulo" id="valores-titulo-id">Coerência da<br>militância à<br>legislatura</h2>
+        </header>
+        <div class="valores-grade">
+          <!-- Valor 1 -->
+          <article class="valor-card">
+            <div aria-hidden="true" class="valor-icone">
+              <i class="ph ph-shield-check"></i>
             </div>
-        </section>
-
-        <!-- ======================================
+            <h3 class="valor-titulo">Sem fundo partidário público</h3>
+            <p class="valor-descricao">
+              Campanha custeada por quem acredita — não pelo contribuinte.
+            </p>
+          </article>
+          <!-- Valor 2 -->
+          <article class="valor-card">
+            <div aria-hidden="true" class="valor-icone">
+              <i class="ph ph-bank"></i>
+            </div>
+            <h3 class="valor-titulo">Sem privilégios</h3>
+            <p class="valor-descricao">
+              Recusa de mordomias, supersalários e aposentadorias especiais.
+            </p>
+          </article>
+          <!-- Valor 3 -->
+          <article class="valor-card">
+            <div aria-hidden="true" class="valor-icone">
+              <i class="ph ph-users-three"></i>
+            </div>
+            <h3 class="valor-titulo">Compromisso com o cidadão</h3>
+            <p class="valor-descricao">
+              Mandato aberto, fiscalizável e prestador de contas — sempre.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================
          Chamada para Ação (CTA)
          ====================================== -->
-        <section class="secao-cta" aria-labelledby="cta-visao-titulo">
-            <div class="container cta-conteudo">
-                <h2 class="cta-titulo" id="cta-visao-titulo">ESSA VISÃO TAMBÉM É<br>SUA?</h2>
-                <p class="cta-descricao">Some forças com a campanha. Sua cidade precisa de você no time.</p>
-                <a href="voluntario.html" class="botao-escuro cta-botao">
-                    JUNTE À CAMPANHA
-                    <i class="ph ph-arrow-right" aria-hidden="true"></i>
-                </a>
-            </div>
-        </section>
-
-    </main>
-
+    <section aria-labelledby="cta-visao-titulo" class="secao-cta">
+      <div class="container cta-conteudo">
+        <h2 class="cta-titulo" id="cta-visao-titulo">ESSA VISÃO TAMBÉM É<br>SUA?</h2>
+        <p class="cta-descricao">Some forças com a campanha. Sua cidade precisa de você no time.</p>
+        <a class="botao-escuro cta-botao" href="voluntario.html">
+          JUNTE À CAMPANHA
+          <i aria-hidden="true" class="ph ph-arrow-right"></i>
+        </a>
+      </div>
+    </section>
     <!-- ======================================
+         Depoimentos (Carrossel)
+         ====================================== -->
+  
+
+
+
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="assets/images/webp/Logo-Circular.webp" rel="icon" type="image/webp">
+  <title>Augusto Duarte · Candidato a Deputado Estadual SP</title>
+  <meta content="Candidato a Deputado Estadual por São Paulo. Ex-Conselheiro Tutelar em Santos, ex-Vereador em Santos (com dois mandatos: 2017/2020 - 2021/2024) e ex-Secretário de Habitação de Santos. Gestão pública experiente, legislador de resultados." name="description">
+
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  <link href="../assets/css/global.css" rel="stylesheet">
+  <link href="assets/css/index.css" rel="stylesheet">
+  <link href="assets/css/fonts.css" rel="stylesheet">
+  <link href="assets/css/phosphor.css" rel="stylesheet">
+  <link href="../assets/css/acessibilidade.css" rel="stylesheet">
+  <link href="assets/css/loader.css" rel="stylesheet">
+  <link href="assets/css/modal.css" rel="stylesheet">
+
+
+
+
+  
+</main>
+  <!-- ======================================
        Rodapé (Footer)
        ====================================== -->
-    <footer class="rodape" role="contentinfo">
-        <div class="container rodape-grade">
-
-            <div class="rodape-marca">
-                <img src="../assets/images/.webp/ad-logo.webp" alt="Logo Augusto Duarte" class="rodape-logo"
-                    loading="lazy">
-                <p class="rodape-slogan">NOVO: A Gente Respeita o Brasil</p>
-                <p class="rodape-sobre">
-                    Augusto Duarte Moreira Neto — Pré-candidato a Deputado Estadual por São Paulo.
-                    Vereador em Santos e ex-Secretário de Habitação. Gestão, resultado e respeito ao pagador de
-                    impostos.
-                </p>
-                <form class="rodape-newsletter" aria-label="Inscreva-se na newsletter">
-                    <label for="footer-email" class="sr-only">Seu e-mail</label>
-                    <input type="email" id="footer-email" name="email" required placeholder="seu@email.com" />
-                    <button type="submit">Inscrever</button>
-                </form>
-            </div>
-
-            <nav aria-label="Navegação do rodapé">
-                <span class="rodape-nav-titulo">Navegação</span>
-                <ul class="rodape-nav-lista" role="list">
-                    <li><a href="trajetoria.html">Trajetória</a></li>
-                    <li><a href="legado.html">Legado em Santos</a></li>
-                    <li><a href="visao.html">Visão Estadual</a></li>
-                    <li><a href="voluntario.html">Junte-se à Campanha</a></li>
-                </ul>
-            </nav>
-
-            <address class="rodape-conexao">
-                <span class="rodape-nav-titulo">Conecte-se</span>
-                <div class="rodape-social" aria-label="Redes sociais">
-                    <a href="https://www.instagram.com/augustoduarteoficial/" target="_blank" rel="noreferrer"
-                        aria-label="Instagram">
-                        <i class="ph ph-instagram-logo"></i>
-                    </a>
-                    <a href="https://www.facebook.com/souaugustoduarte" target="_blank" rel="noreferrer"
-                        aria-label="Facebook">
-                        <i class="ph ph-facebook-logo"></i>
-                    </a>
-                </div>
-                <a href="https://novo.org.br" target="_blank" rel="noreferrer" class="rodape-link">→ Jornada NOVO</a>
-                <a href="https://novo.org.br/filie-se" target="_blank" rel="noreferrer" class="rodape-link">→ Filie-se
-                    ao
-                    NOVO</a>
-
-                <div class="rodape-endereco">
-                    <div class="rodape-endereco-titulo">
-                        <i class="ph ph-map-pin" aria-hidden="true"></i>
-                        <span>Comitê de Campanha</span>
-                    </div>
-                    <p class="rodape-endereco-texto">
-                        Rua Azevedo Sodré, 142<br>
-                        Santos — SP
-                    </p>
-                    <a href="https://www.google.com/maps/search/Rua+Azevedo+Sodr%C3%A9+142+Santos+SP" target="_blank"
-                        rel="noreferrer" class="rodape-endereco-mapa">
-                        <i class="ph ph-navigation-arrow icone-mini" aria-hidden="true"></i>
-                        Ver no mapa
-                    </a>
-                </div>
-            </address>
-
+  <footer class="rodape" role="contentinfo" id="rodape-principal">
+    <div class="container rodape-grade">
+      <div class="rodape-marca">
+        <img alt="Logo Oficial Augusto Duarte - Campanha para Deputado Estadual 30633" class="rodape-logo" loading="lazy" src="../assets/images/webp/ad-logo.webp">
+        <p class="rodape-slogan">NOVO: A Gente Respeita o Brasil</p>
+        <p class="rodape-sobre">
+          Augusto Duarte Moreira Neto — Candidato a Deputado Estadual por São Paulo.
+          Vereador em Santos e ex-Secretário de Habitação. Gestão, resultado e respeito ao pagador de
+          impostos.
+        </p>
+        <form aria-label="Inscreva-se na newsletter" class="rodape-newsletter newsletter-form-grid">
+          <label class="sr-only" for="footer-email">Seu e-mail</label>
+          <input id="footer-email" name="email" placeholder="seu@email.com *" required="" type="email">
+          <label class="checkbox-lgpd-mini" for="lgpd-rodape">
+            <input type="checkbox" name="lgpd_politica" id="lgpd-rodape" required="">
+            <span class="checkmark"></span>
+            <span>Concordo com a <a href="privacidade.html">Política de Privacidade</a> (v1.0) *</span>
+          </label>
+          <button type="submit" aria-live="polite">Inscrever</button>
+        </form>
+      </div>
+      <nav aria-label="Links rápidos do rodapé" class="rodape-nav-colunas">
+        <div>
+          <h3 class="rodape-nav-titulo">Conheça</h3>
+          <ul class="rodape-nav-lista">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="trajetoria.html">Trajetória</a></li>
+            <li><a href="legado.html">Legado</a></li>
+            <li><a href="visao.html">Visão Estadual</a></li>
+          </ul>
         </div>
-
-        <div class="faixa-cores" aria-hidden="true">
-            <div class="faixa-cores-laranja"></div>
-            <div class="faixa-cores-amarelo"></div>
-            <div class="faixa-cores-verde"></div>
-            <div class="faixa-cores-azul"></div>
+        <div>
+          <h3 class="rodape-nav-titulo">Participe</h3>
+          <ul class="rodape-nav-lista">
+            <li><a href="voluntario.html">Seja Voluntário</a></li>
+            <li><a href="ouvidoria.html">Ouvidoria</a></li>
+            <li><a href="materiais.html">Materiais</a></li>
+            <li><a href="restrita.html">Área Restrita</a></li>
+          </ul>
         </div>
-
-        <div class="rodape-inferior">
-            <div class="container rodape-inferior-conteudo">
-                <span class="rodape-inferior-marca">NOVO 30 · Deputado Estadual · SP</span>
-                <span>CNPJ da campanha 00.000.000/0001-00 — Propaganda eleitoral conforme Lei nº 9.504/97</span>
-                <span>© 2026 Augusto Duarte</span>
-            </div>
+        <div>
+          <h3 class="rodape-nav-titulo">Acompanhe</h3>
+          <ul class="rodape-nav-lista">
+            <li><a href="noticias.html">Notícias</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+          </ul>
         </div>
-    </footer>
-
-    <!-- ======================================
+        <div>
+          <h3 class="rodape-nav-titulo">Navegação</h3>
+          <ul class="rodape-nav-lista">
+            <li><a href="acessibilidade-info.html">Acessibilidade</a></li>
+            <li><a href="mapa.html">Mapa do Site</a></li>
+            <li><a href="privacidade.html">Privacidade</a></li>
+          </ul>
+        </div>
+      </nav>
+      <address class="rodape-conexao">
+        <h3 class="rodape-nav-titulo">Conecte-se</h3>
+        <div aria-label="Redes sociais" class="rodape-social">
+          <a aria-label="Instagram" href="https://www.instagram.com/augustoduarteoficial/" rel="noreferrer" target="_blank">
+            <i class="ph ph-instagram-logo"></i>
+          </a>
+          <a aria-label="Facebook" href="https://www.facebook.com/souaugustoduarte" rel="noreferrer" target="_blank">
+            <i class="ph ph-facebook-logo"></i>
+          </a>
+        </div>
+        <a class="rodape-link" href="https://novo.org.br" rel="noreferrer" target="_blank">Jornada NOVO →</a>
+        <a class="rodape-link" href="https://novo.org.br/filie-se" rel="noreferrer" target="_blank">Filie-se
+          ao
+          NOVO →</a>
+        <div class="rodape-endereco">
+          <div class="rodape-endereco-titulo">
+            <i aria-hidden="true" class="ph ph-map-pin"></i>
+            <span>Comitê de Campanha</span>
+          </div>
+          <p class="rodape-endereco-texto">
+            Rua Azevedo Sodré, 142<br>
+            Santos — SP
+          </p>
+          <a class="rodape-endereco-mapa" href="https://www.google.com/maps/search/Rua+Azevedo+Sodr%C3%A9+142+Santos+SP" rel="noreferrer" target="_blank">
+            <i aria-hidden="true" class="ph ph-navigation-arrow icone-mini"></i>
+            Ver no mapa
+          </a>
+        </div>
+      </address>
+    </div>
+    <div aria-hidden="true" class="faixa-cores">
+      <div class="faixa-cores-laranja"></div>
+      <div class="faixa-cores-amarelo"></div>
+      <div class="faixa-cores-verde"></div>
+      <div class="faixa-cores-azul"></div>
+    </div>
+    <div class="rodape-inferior">
+      <div class="container rodape-inferior-conteudo">
+        <span class="rodape-inferior-marca">NOVO 30 · Deputado Estadual · SP</span>
+        <span>CNPJ da campanha 68.236.031/0001-80 — Propaganda eleitoral conforme Lei nº 9.504/97</span>
+        <span>© 2026 Augusto Duarte</span>
+      </div>
+    </div>
+  </footer>
+  <!-- ======================================
        WhatsApp Flutuante
        ====================================== -->
-    <a href="https://wa.me/5513996554500?text=Ol%C3%A1%21%20Gostaria%20de%20fazer%20parte%20da%20campanha%20do%20Augusto%20Duarte."
-        target="_blank" rel="noreferrer" class="botao-whatsapp" aria-label="Fale no WhatsApp">
-        <i class="ph ph-whatsapp-logo icone-grande"></i>
-    </a>
-
-    <!-- ======================================
+  <a aria-label="Fale no WhatsApp" class="botao-whatsapp" href="https://wa.me/5513996554500?text=Ol%C3%A1%21%20Gostaria%20de%20fazer%20parte%20da%20campanha%20do%20Augusto%20Duarte." rel="noreferrer" target="_blank">
+    <i class="ph ph-whatsapp-logo icone-grande"></i>
+  </a>
+  <!-- ======================================
        Scripts
        ====================================== -->
-    <script src="../assets/js/menu.js" defer></script>
-</body>
 
-</html>
+  <!-- Badge Flutuante 30633 -->
+  <a href="../index.html#inicio" class="badge-flutuante" id="badge-flutuante" aria-label="Vote Augusto 30633">
+    <div class="badge-flutuante-texto">Vote<br>Augusto</div>
+    <div class="badge-flutuante-numero">30633</div>
+  </a>
+  <!-- ======================================
+         VLibras Widget
+         ====================================== -->
+  <div class="enabled" vw="">
+    <div class="active" vw-access-button=""></div>
+    <div vw-plugin-wrapper="">
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <!-- ======================================
+         Menu de Acessibilidade
+         ====================================== -->
+  <div class="a11y-widget" id="a11y-widget">
+    <button aria-expanded="false" aria-label="Abrir menu de acessibilidade" class="a11y-toggle" id="a11y-toggle">
+      <i class="ph ph-wheelchair icone-grande"></i>
+    </button>
+    <div aria-hidden="true" class="a11y-menu" id="a11y-menu">
+      <div class="a11y-menu-header">
+        <span>Acessibilidade</span>
+        <button aria-label="Fechar menu de acessibilidade" class="a11y-fechar" id="a11y-fechar">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      <div class="a11y-opcoes">
+        <div class="a11y-fonte-grupo">
+          <button aria-label="Aumentar fonte" class="a11y-btn a11y-btn-fonte" id="btn-fonte-aumentar">A+</button>
+          <button aria-label="Diminuir fonte" class="a11y-btn a11y-btn-fonte" id="btn-fonte-diminuir">A-</button>
+        </div>
+
+        <button class="a11y-btn" id="btn-alto-contraste" aria-pressed="false">
+          <i class="ph ph-moon" aria-hidden="true"></i> Alto Contraste Escuro
+        </button>
+        <button class="a11y-btn" id="btn-alto-contraste-claro" aria-pressed="false">
+          <i class="ph ph-sun" aria-hidden="true"></i> Alto Contraste Claro
+        </button>
+        <button class="a11y-btn" id="btn-daltonismo" aria-pressed="false">
+          <i class="ph ph-eye" aria-hidden="true"></i> Escala de Cinza
+        </button>
+
+        <details class="a11y-dropdown">
+          <summary class="a11y-btn a11y-dropdown-summary">
+            <div><i class="ph ph-drop" aria-hidden="true"></i> Filtros de Daltonismo</div>
+            <i class="ph ph-caret-down a11y-dropdown-icon" aria-hidden="true"></i>
+          </summary>
+          <div class="a11y-dropdown-content">
+            <button class="a11y-btn a11y-btn-sub" id="btn-protanopia" aria-pressed="false">Protanopia</button>
+            <button class="a11y-btn a11y-btn-sub" id="btn-deuteranopia" aria-pressed="false">Deuteranopia</button>
+            <button class="a11y-btn a11y-btn-sub" id="btn-tritanopia" aria-pressed="false">Tritanopia</button>
+          </div>
+        </details>
+        <button class="a11y-btn" id="btn-dislexia" aria-pressed="false">
+          <i class="ph ph-text-aa" aria-hidden="true"></i> Fonte para Dislexia
+        </button>
+        <button class="a11y-btn" id="btn-destacar-links" aria-pressed="false">
+          <i class="ph ph-link" aria-hidden="true"></i> Destacar Links
+        </button>
+        <button class="a11y-btn" id="btn-espacamento" aria-pressed="false">
+          <i class="ph ph-text-align-justify" aria-hidden="true"></i> Espaçamento de Texto
+        </button>
+        <button class="a11y-btn" id="btn-animacoes" aria-pressed="false">
+          <i class="ph ph-play-pause" aria-hidden="true"></i> Pausar Animações
+        </button>
+        <button class="a11y-btn" id="btn-cursor" aria-pressed="false">
+          <i class="ph ph-cursor" aria-hidden="true"></i> Cursor Grande
+        </button>
+        <button class="a11y-btn" id="btn-mascara" aria-pressed="false">
+          <i class="ph ph-mask-happy" aria-hidden="true"></i> Máscara de Leitura
+        </button>
+      </div>
+    </div>
+  </div>
+  <script defer="" src="../assets/js/menu.js"></script>
+  <script defer="" src="../assets/js/acessibilidade.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script defer="" src="../assets/js/carrossel.js"></script>
+  <script defer="" src="../assets/js/animations.js"></script><script defer="" src="../assets/js/lgpd.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var seloOriginal = document.querySelector('.selo-campanha');
+      var badgeFlutuante = document.getElementById('badge-flutuante');
+
+      if (badgeFlutuante) {
+        if (seloOriginal) {
+          var observer = new IntersectionObserver(function (entries) {
+            if (!entries[0].isIntersecting) {
+              badgeFlutuante.classList.add('visivel');
+            } else {
+              badgeFlutuante.classList.remove('visivel');
+            }
+          }, { threshold: 0.1 });
+          observer.observe(seloOriginal);
+        } else {
+          // Nas subpaginas, o selo fica permanentemente visivel
+          badgeFlutuante.classList.add('visivel');
+        }
+      }
+    });
+  </script>
+  <!-- ======================================
+       Modal Bem-Vindo
+       ====================================== -->
+  <div class="modal-bem-vindo-overlay" id="modal-bem-vindo">
+    <div class="modal-bem-vindo-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-bem-vindo">
+      <button class="modal-fechar" id="modal-btn-fechar" aria-label="Fechar modal">
+        <i class="ph ph-x"></i>
+      </button>
+      <div class="modal-grid">
+        <div class="modal-imagem-container">
+          <img src="../assets/images/webp/banner_trajetoria.webp" alt="Augusto Duarte sorrindo, vestindo camisa preta e segurando a bandeira do estado de São Paulo à frente do corpo.">
+        </div>
+        <div class="modal-info">
+          <span class="modal-tag">Junte-se a nós</span>
+          <h2 class="modal-titulo" id="modal-titulo-bem-vindo">
+            Vote<br>Augusto
+            <span>30633</span>
+          </h2>
+          <div class="modal-botoes">
+            <a href="voluntario.html" class="botao-principal">
+              Junte-se à Campanha
+            </a>
+            <a href="#" class="botao-escuro" id="modal-btn-continuar">
+              Continuar para o site
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer="" src="../assets/js/modal.js"></script>
+  <script defer="" src="../assets/js/newsletter.js"></script>
+
+
+
+
+</body></html>

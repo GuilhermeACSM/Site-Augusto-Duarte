@@ -1,0 +1,23 @@
+/* ======================================
+   Estilos específicos para Declaração de Acessibilidade
+   ====================================== */
+.acessibilidade-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.acessibilidade-content h2 {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-4);
+  color: var(--color-primary);
+}
+.acessibilidade-content p {
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+.acessibilidade-content ul {
+  margin-left: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.acessibilidade-content li {
+  margin-bottom: var(--space-2);
+}

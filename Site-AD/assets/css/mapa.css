@@ -1,0 +1,40 @@
+/* ======================================
+   Estilos específicos para Mapa do Site
+   ====================================== */
+.mapa-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.mapa-lista {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: var(--space-6);
+}
+.mapa-lista>li {
+  margin-bottom: var(--space-4);
+}
+.mapa-categoria {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 4px;
+}
+.mapa-sublista {
+  list-style-type: disc;
+  padding-left: var(--space-6);
+  margin-top: var(--space-2);
+}
+.mapa-sublista li {
+  margin-bottom: var(--space-2);
+}
+.mapa-sublista a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.mapa-sublista a:hover,
+.mapa-sublista a:focus {
+  color: var(--novo-orange);
+}

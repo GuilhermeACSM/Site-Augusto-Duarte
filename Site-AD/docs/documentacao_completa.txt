@@ -1,0 +1,250 @@
+DOCUMENTAÇÃO COMPLETA DO PROJETO - SITE AUGUSTO DUARTE
+============================================================
+
+--- INÍCIO DO ARQUIVO: implementation_plan.md ---
+
+# Adequação LGPD — Site Augusto Duarte (v5 — revisada final)
+
+Plano atualizado com detalhamento explícito das fontes de download de assets para o self-hosting seguro, seguindo os rigorosos padrões do seu Design System.
+
+---
+
+## 🎨 DIRETRIZ DE DESIGN SYSTEM
+
+> [!IMPORTANT]
+> **Fidelidade Visual Garantida:** Todos os novos elementos visuais criados para a LGPD (checkboxes de consentimento, textos explicativos, e principalmente o **Banner de Cookies/Privacidade**) seguirão rigorosamente o Design System já estabelecido no site.
+> - Serão utilizadas as variáveis CSS do `global.css` (cores institucionais, espaçamentos harmônicos).
+> - A tipografia seguirá o padrão (Bebas Neue para títulos do banner, Inter para os textos).
+> - Os botões de aceite usarão a classe `.botao-principal` ou `.botao-secundario` existentes, garantindo consistência total com o restante da interface.
+
+---
+
+## 3. Planejamento da Área Restrita (Backend e Frontend)
+A Área Restrita deixará de ser apenas um portal estático e passará a ser o **Painel Administrativo (CMS + LGPD)** da campanha, rodando integrado ao Banco de Dados.
+
+### 3.1. Perfis de Usuário (Cargos)
+- **Administrador (DPO/Chefe de Campanha):** Acesso total (criação de contas, deleção de registros LGPD, configurações).
+- **Editor / Comunicação:** Acesso de conteúdo (publicar Notícias, atualizar Agenda, aprovar Depoimentos).
+- **Atendimento / Voluntariado:** Acesso operacional (responder Ouvidoria, gerenciar lista de Voluntários).
+
+### 3.2. Módulos e Funcionalidades (Backend)
+- **Gestão de Eleitores e LGPD (Portal da Privacidade):** Tabela com todos os cadastros. O DPO poderá editar ou anonimizar/excluir (Esquecer Eleitor) registros.
+- **Gestão de Conteúdo (CMS):** Interface para redigir/publicar Notícias, adicionar eventos na Agenda e gerenciar o FAQ.
+- **Moderação de Interações:** Caixa de entrada para aprovar/rejeitar Depoimentos, Kanban para Ouvidoria e segmentação de Voluntários.
+
+### 3.3 Telas Faltantes (Frontend)
+Antes de construir o Backend, as seguintes telas precisam ser desenhadas no Frontend:
+- `agenda.html`
+- `galeria.html`
+- `restrita.html` (Tela de Login)
+- `restrita-dashboard.html` (O painel administrativo em si)
+
+## 4. Próximos Passos (Transição para o Backend)
+Após a conclusão total do Frontend estático, a etapa de Backend envolverá:
+1. Modelagem do Banco de Dados (SQLite/PostgreSQL) para as tabelas `eleitores`, `depoimentos`, `noticias`, `eventos_agenda`, `chamados_ouvidoria`, `usuarios_admin`.
+2. Criação da API RESTful para alimentar o site de forma dinâmica.
+3. Autenticação e Autorização (Sessão segura) para a Área Restrita.
+
+### ETAPA 6: SELF-HOSTING (FONTES E ÍCONES) (CONCLUÍDO)
+Arquivos nativos baixados para isolar trackers externos:
+- Fontes Inter e Bebas Neue nativas no projeto.
+- Ícones Phosphor nativos (`phosphor.css`).
+
+### ETAPA 7: OTIMIZAÇÃO E OFUSCAÇÃO (NOVO)
+Antes de subir para produção (deploy final), o código passará por limpeza:
+- **PurgeCSS**: O arquivo `phosphor.css` gigante será reduzido apenas aos ícones estritamente usados, diminuindo seu tamanho.
+- **Minificação/Ofuscação**: Todo o HTML, CSS e JS será "espremido" e sem comentários, tornando o código ilegível para usuários que tentarem usar o "Inspecionar Elemento", protegendo o layout e as regras.
+
+### ETAPA 8: TELAS FALTANTES (FRONTEND)
+
+## 5. SELF-HOSTING (FONTES E ÍCONES) — DETALHAMENTO DE DOWNLOADS
+
+Para eliminar a transferência automática do endereço IP dos visitantes para servidores nos EUA (infração de privacidade), baixaremos e serviremos as fontes e ícones dentro do próprio servidor do site. As pastas `assets/fonts` e `assets/icons` **já foram criadas no projeto agora mesmo.**
+
+> [!TIP]
+> Durante a execução do Item 6 deste plano, **eu mesmo farei o download** e configuração destes arquivos para você, mas aqui está a documentação exata de onde eles vêm e o que são, para sua segurança:
+
+### Google Fonts (Inter e Bebas Neue)
+- **Onde baixar com segurança e eficácia:** Site [Google Webfonts Helper (gwfh.mranftl.com)](https://gwfh.mranftl.com/fonts). É o serviço padrão da comunidade para baixar Google Fonts prontas para self-hosting, pois ele já gera os arquivos no formato moderno `.woff2` e entrega o CSS pronto.
+- **O que será baixado (na pasta `assets/fonts/`):**
+  - Fonte **Bebas Neue**: Apenas o peso `400` (Regular) no formato `.woff2`.
+  - Fonte **Inter**: Os pesos `300` (Light), `400` (Regular) e `700` (Bold) no formato `.woff2`.
+- **Implementação:** Colocaremos um arquivo `fonts.css` na pasta css e trocaremos os links `<link href="https://fonts.googleapis.com...` do HTML.
+
+### Phosphor Icons
+O site utiliza dezenas de ícones do Phosphor via pacote do unpkg. Baixar os SVGs um a um quebraria o CSS atual (`class="ph ph-logo"`). A forma correta e segura é baixar o pacote Web (Icon Font).
+- **Onde baixar com segurança e eficácia:** No repositório oficial no GitHub [github.com/phosphor-icons/web](https://github.com/phosphor-icons/web/tree/main/src) (é seguro, open-source e é o pacote oficial).
+- **O que será baixado (na pasta `assets/icons/`):**
+  - O arquivo de tipografia de ícones: `Phosphor.woff2`.
+  - O arquivo de estilos global: `regular.css` (que mapeia as classes `ph-` para os glifos).
+- **Implementação:** Trocaremos o script atual `<script defer src="https://unpkg.com/@phosphor-icons/web"></script>` por um link simples para a nossa pasta `<link rel="stylesheet" href="../assets/icons/regular.css">`. Tudo continuará igual visualmente.
+
+---
+
+*(Restante do plano mantido — Mapa de Coleta, Finalidade e Aceite, Banner de Consentimento)*
+
+---
+
+## Plano de Execução Final (11 itens)
+
+| # | Item | O que muda no código | Tempo |
+|---|---|---|---|
+| 🔴 **1** | **Formulários quebrados (Ouvidoria + Depoimentos)** | Criar JS provisório (WhatsApp) + preparar campos ocultos para o futuro banco de dados. | **1h30** |
+| 🔴 **2** | **Newsletter sem handler** | Criar JS que previne o reload e avisa sucesso. Preparar estrutura de dados. | **1h** |
+| 🔴 **3** | **Aceite + finalidade em todos os formulários** | Adicionar textos de finalidade e checkboxes customizados (Política e Comunicações) no HTML/CSS (seguindo padrão Design System). | **1h30** |
+| 🔴 **4** | **Política de Privacidade** | Criar a página HTML com o texto real (baseado no que vai para o backend/WhatsApp/Resend). | **1h30** |
+| 🔴 **5** | **Banner de consentimento** | Criar componente de aviso com o Design System do site + script que salva aceite no localStorage. | **1h30** |
+| 🟡 **6** | **Self-hosting de Google Fonts e Phosphor Icons** | Baixar os arquivos recomendados (`.woff2`) das fontes confiáveis, salvar nas pastas `assets/fonts` e `assets/icons` criadas, e atualizar HTML. | **1h** |
+| 🟡 **7** | **Link da política no rodapé** | Adicionar no HTML das 12 páginas. | **30min** |
+| 🟡 **8** | **Guia de criação do e-mail DPO** | Criar o documento `guia-dpo.md` separado com instruções passo-a-passo. | **30min** |
+| 🟢 **9** | **Tela de Direitos do Titular (admin)** | Criar painel estático provisório (buscando em localStorage se houver e dando instruções). | **2h** |
+| 🟢 **10** | **Preparação final backend (Schema)** | Padronizar atributos `name` e registrar os campos `hidden` de forma estruturada. | **30min** |
+| 🟢 **11** | **Documento de Arquitetura do Backend** | Criar um guia detalhado (`guia-backend.md`) estipulando quais regras de negócio devem sair do Frontend e ir exclusivamente para o Backend. | **45min** |
+
+**Tempo total estimado: ~12h15**
+
+---
+
+Com as fontes explicadas detalhadamente e as pastas `assets/fonts` e `assets/icons` já criadas no seu computador, me dê o OK final para executarmos o **Item 1**.
+
+
+--- FIM DO ARQUIVO: implementation_plan.md ---
+
+--- INÍCIO DO ARQUIVO: guia-backend.md ---
+
+# Documento de Arquitetura: Migração para Backend e Banco de Dados
+
+Este documento lista todas as alterações que precisam ser feitas futuramente, quando o backend for desenvolvido, transferindo as regras de negócio e coleta de dados do Frontend para a API, mantendo total conformidade com a LGPD.
+
+## 1. Formulário de Voluntário (`voluntario.html` e `assets/js/voluntario.js`)
+- **O que faz hoje:** Coleta os dados e monta uma URL para abrir o WhatsApp do usuário.
+- **Como ficará no backend:**
+  - O JS (`assets/js/voluntario.js`) deverá fazer um `POST` para um endpoint (ex: `/api/voluntarios`).
+  - O backend deve salvar os dados em uma tabela `voluntarios` (nome, e-mail, telefone, bairro, como quer ajudar, mensagem).
+  - O backend deve registrar obrigatoriamente os dados dos campos ocultos de consentimento: `formulario_origem`, `consentimento_data`, `consentimento_versao`, `aceita_comunicacoes` e `lgpd_politica`.
+  - O backend enviará o WhatsApp/Email de boas-vindas usando a integração apropriada, em vez de forçar o usuário a enviar a mensagem no celular.
+
+## 2. Formulário de Ouvidoria (`ouvidoria.html` e `assets/js/ouvidoria-submit.js`)
+- **O que faz hoje:** Redireciona para o WhatsApp de forma provisória.
+- **Como ficará no backend:**
+  - Envio via `POST` para `/api/ouvidoria`.
+  - Salvar no banco (tabela `ouvidoria` ou `chamados`).
+  - Coletar metadados de LGPD (`consentimento_data`, `aceita_comunicacoes`, etc).
+  - Responder automaticamente ao usuário por e-mail informando que a mensagem foi recebida e será analisada (via integração **Resend**).
+
+## 3. Formulário de Depoimentos (`depoimentos.html` e `assets/js/depoimentos-submit.js`)
+- **O que faz hoje:** Monta string e manda pro WhatsApp, informando se anexou foto (o arquivo em si não vai para o WhatsApp facilmente pelo navegador).
+- **Como ficará no backend:**
+  - Envio multipart/form-data via `POST` para `/api/depoimentos`.
+  - O backend precisa receber a foto de perfil (`file`), validá-la, enviá-la para um bucket de armazenamento (S3 ou equivalente) e salvar a URL no banco de dados, vinculada ao depoimento.
+  - O depoimento entra no banco com status `pendente` até aprovação da equipe na Área Restrita.
+  - Coletar metadados LGPD (`consentimento_data`, `aceita_comunicacoes`, etc).
+
+## 4. Newsletter (`todas as páginas` e `assets/js/newsletter.js`)
+- **O que faz hoje:** Finge sucesso, impede o reload, e guarda o e-mail em um `localStorage` chamado `emails_newsletter`.
+- **Como ficará no backend:**
+  - Envio de `POST` para `/api/newsletter/subscribe`.
+  - O backend salvará no banco de dados e adicionará a flag `aceita_comunicacoes = true` com base no checkbox.
+  - A equipe de backend deverá escrever um script de migração que leia o array `emails_newsletter` do localStorage dos admins (ou exportado via Tela de Direitos do Titular) e insira no banco de dados inicial.
+
+## 5. Preferências de Acessibilidade (`assets/js/acessibilidade.js`)
+- **O que faz hoje:** Salva estado do contraste, tamanho da fonte, etc no `localStorage`.
+- **Como ficará no backend:**
+  - Essas preferências *não* precisam ir para o banco de dados. Elas devem continuar no `localStorage` porque são preferências locais do dispositivo. Nenhuma mudança na arquitetura é necessária aqui. Apenas a informação no "Banner de Consentimento" de que guardamos isso.
+
+*(Este documento será atualizado ao longo da execução da LGPD).*
+
+
+--- FIM DO ARQUIVO: guia-backend.md ---
+
+--- INÍCIO DO ARQUIVO: planejamento_area_restrita.md ---
+
+# Planejamento da Área Restrita (Painel Administrativo)
+
+A Área Restrita deixará de ser apenas um portal de informações estáticas e passará a ser um verdadeiro **Painel Administrativo** da campanha, rodando integrado ao Banco de Dados (que construiremos na etapa do Backend).
+
+## 1. Perfis de Usuário (Cargos)
+
+Para garantir segurança e organização, a Área Restrita terá **3 níveis de acesso**:
+
+| Perfil | Nível de Acesso | Responsabilidades no Painel |
+|--------|-----------------|-----------------------------|
+| **Administrador (DPO/Chefe de Campanha)** | Acesso Total | Pode criar contas para a equipe, excluir qualquer registro do banco de dados (cumprimento de LGPD), e gerenciar configurações vitais da campanha. |
+| **Editor / Comunicação** | Acesso de Conteúdo | Responsável por publicar **Notícias**, atualizar a **Agenda**, e moderar/aprovar os **Depoimentos** enviados pelos eleitores. |
+| **Atendimento / Voluntariado** | Acesso Operacional | Visualiza os chamados da **Ouvidoria** para responder, e organiza a lista de inscritos no **Voluntariado**. |
+
+> [!IMPORTANT]
+> A Área Restrita será invisível para visitantes normais. Só entrará quem tiver um login e senha criados previamente pelo Administrador.
+
+---
+
+## 2. Módulos e Funcionalidades
+
+O painel será dividido nas seguintes seções:
+
+### 2.1 Gestão de Eleitores e LGPD (Portal da Privacidade)
+- **Visualização de Cadastros:** Uma tabela unificada com todo mundo que se cadastrou (Voluntários, Ouvidoria, Newsletter).
+- **Ações de DPO (Encarregado de Dados):**
+  - **Editar:** Alterar nome/apelido caso o eleitor solicite.
+  - **Anonimizar/Excluir:** Botão vermelho de "Esquecer Eleitor", que apaga os dados pessoais do banco de dados permanentemente (mantendo apenas estatísticas anônimas).
+
+### 2.2 Gestão de Conteúdo (CMS)
+- **Notícias:** Interface para redigir, formatar (com negrito, imagens) e publicar notícias no site.
+- **Agenda:** Adicionar eventos (data, hora, local) que aparecerão automaticamente na página de agenda.
+- **FAQ:** Adicionar ou remover perguntas frequentes da página de ouvidoria.
+
+### 2.3 Moderação de Interações
+- **Depoimentos:** Caixa de entrada com os depoimentos enviados pelo formulário. A equipe pode clicar em `[Aprovar]` (publica no site) ou `[Rejeitar]` (apaga).
+- **Ouvidoria:** Tabela no estilo Kanban (Aberto, Em andamento, Resolvido) para gerenciar as mensagens recebidas.
+- **Voluntariado:** Lista de voluntários segmentada por bairro ou área de interesse (para facilitar a convocação para bandeiraços).
+
+---
+
+## 3. Próximos Passos (Transição para o Backend)
+
+Quando formos para as próximas etapas de desenvolvimento (Backend):
+1. Projetaremos o banco de dados seguro (SQLite ou PostgreSQL).
+2. Criaremos a tela de Login da Área Restrita.
+3. Desenvolveremos as tabelas internas usando o mesmo padrão de design laranja/azul do site, mas com um layout de painel (dashboard).
+
+
+--- FIM DO ARQUIVO: planejamento_area_restrita.md ---
+
+--- INÍCIO DO ARQUIVO: explicacao_politica_privacidade.md ---
+
+# Política de Privacidade (Explicada Tim-Tim por Tim-Tim)
+
+A LGPD (Lei Geral de Proteção de Dados) existe para devolver o controle dos dados às pessoas. No site do Augusto Duarte, nossa política foi construída para ser **transparente, enxuta e direta**. Aqui está a tradução do "juridiquês" para a prática:
+
+## 1. O que nós guardamos? (Quase nada)
+Se o usuário apenas entrar no site e ler as notícias, **não guardamos absolutamente nada** sobre ele nos nossos servidores. Sem "cookies" de rastreamento, sem venda de dados para o Facebook.
+Os únicos dados salvos ficam **no próprio celular/computador da pessoa** (para lembrar se ela ativou o Modo Alto Contraste ou se fechou o banner da newsletter). 
+
+Se ela resolver preencher algum formulário, aí sim ela nos envia os dados (Nome, E-mail, Telefone).
+
+## 2. Formulários: Para que serve cada um?
+Não pedimos nenhum dado "só por pedir". Tudo tem um motivo exato:
+- **Voluntário:** Precisamos do contato para organizar os times e convidar para eventos.
+- **Ouvidoria:** Precisamos saber quem é a pessoa para responder a dúvida ou reclamação dela.
+- **Depoimentos:** Precisamos da foto e cidade para dar credibilidade e publicar na página (se aprovado pela equipe).
+- **Newsletter:** Só precisamos do e-mail para enviar as novidades.
+
+## 3. Segurança e Privacidade Total
+Nós assumimos um compromisso sério:
+- **Self-hosting:** Todas as fontes e ícones do site ficam hospedados no nosso próprio servidor. Não usamos o Google Fonts externo. Isso significa que grandes corporações (como o Google) não vão conseguir rastrear o IP das pessoas que visitam nosso site.
+- **Venda de dados ZERO:** Nunca, em hipótese alguma, compartilharemos esses contatos com corretores, empresas de telemarketing ou terceiros. O dado é da campanha, e fica na campanha.
+
+## 4. O "Poder" está na mão do usuário (Direitos do Titular)
+A lei diz que a pessoa manda nos dados dela. Por isso:
+- Se a pessoa assinou a Newsletter mas enjoou, ela clica em "Sair" no rodapé do e-mail.
+- Se a pessoa mandou um depoimento mas se arrependeu, ela manda um e-mail para `privacidade@augustoduarte.com.br`. A nossa equipe vai entrar na Área Restrita (Painel Administrativo) e apagar o depoimento e o contato dela para sempre com um único clique.
+- Se ela casou, mudou de nome e quer atualizar o cadastro, basta pedir pelo mesmo e-mail.
+
+## 5. Por que não temos Banner de Cookies?
+O temido "Banner de Cookies" só é obrigatório por lei quando o site usa rastreadores invisíveis (como o Google Analytics) para espionar o usuário. Como nós não fazemos isso e respeitamos a privacidade por design, o site do Augusto Duarte é um ambiente limpo e livre de interrupções chatas.
+
+*Simples, direto, e 100% dentro da lei.*
+
+
+--- FIM DO ARQUIVO: explicacao_politica_privacidade.md ---
+

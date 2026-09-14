@@ -1,0 +1,383 @@
+﻿/* ======================================
+   MODAL BEM-VINDO (PRIMEIRA VISITA)
+   ====================================== */
+.modal-bem-vindo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(5px);
+  padding: var(--space-4);
+}
+
+.modal-bem-vindo-overlay.visivel {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-bem-vindo-conteudo {
+  background-color: var(--novo-white);
+  border-radius: var(--radius-xl);
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-bem-vindo-overlay.visivel .modal-bem-vindo-conteudo {
+  transform: translateY(0) scale(1);
+}
+
+.modal-fechar {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: background-color 0.2s, color 0.2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-fechar:hover {
+  background-color: var(--color-primary);
+  color: var(--novo-white);
+}
+
+.modal-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-imagem-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-color: var(--color-primary);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-imagem-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.modal-info {
+  padding: var(--space-6) var(--space-8);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-obrigado-texto {
+  margin-top: 1rem;
+}
+
+.modal-obrigado-botoes {
+  margin-top: 1.5rem;
+}
+
+.modal-tag {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.modal-titulo {
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.modal-titulo span.modal-numero-urna-old {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  margin-top: var(--space-2);
+}
+
+.modal-botoes {
+  width: 100%;
+  margin-top: var(--space-2);
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.modal-botoes>a {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Responsividade para Desktop */
+@media (min-width: 768px) {
+  .modal-grid {
+    flex-direction: row;
+  }
+
+  .modal-imagem-container {
+    width: 55%;
+    height: auto;
+    min-height: 500px;
+  }
+
+  .modal-info {
+    width: 45%;
+    padding: var(--space-8);
+    justify-content: center;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .modal-imagem-container img {
+    transform: scale(0.96);
+    transform-origin: bottom center;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+}
+
+.modal-imagem-container {
+  background: linear-gradient(135deg, var(--novo-orange) 0%, #cc5200 100%);
+  box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-titulo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.modal-numero-urna {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--novo-white);
+  background: linear-gradient(135deg, var(--novo-orange) 0%, #cc5200 100%);
+  padding: 0.2rem 2.5rem;
+  border-radius: 16px;
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  margin: 1.5rem 0 1rem 0;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(255, 102, 0, 0.4), inset 0 2px 10px rgba(255, 255, 255, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.modal-numero-urna:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(255, 102, 0, 0.6), inset 0 2px 15px rgba(255, 255, 255, 0.5);
+}
+
+.modal-titulo {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--novo-orange);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.modal-titulo::first-line {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--color-text);
+  letter-spacing: 0.3em;
+  font-weight: 800;
+}
+
+/* Responsividade do Modal para Celulares */
+@media (max-width: 768px) {
+  .modal-titulo {
+    font-size: 2.2rem;
+  }
+
+  .modal-titulo::first-line {
+    font-size: 1rem;
+  }
+
+  .modal-numero-urna {
+    font-size: 3.2rem;
+    padding: 0.2rem 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .modal-imagem-container {
+    height: 220px;
+    min-height: 220px;
+  }
+}
+
+/* --- Otimizaes do Modal para Mobile --- */
+@media (max-width: 768px) {
+  .modal-bem-vindo-conteudo {
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .modal-imagem-container {
+    height: 240px;
+    min-height: 240px;
+  }
+
+  .modal-info {
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .modal-numero-urna {
+    font-size: 2.8rem;
+    padding: 0.2rem 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .modal-titulo {
+    font-size: 1.8rem;
+  }
+
+  .modal-titulo::first-line {
+    font-size: 0.9rem;
+  }
+
+  .modal-botoes {
+    gap: var(--space-2);
+    margin-top: 0;
+  }
+
+  .modal-tag {
+    font-size: 0.75rem;
+  }
+}/* ======================================
+   Cartão Animado (Voto) e Botão Azul
+   ====================================== */
+.cartao-voto-animado {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  padding: 4px; /* Espessura da borda animada */
+  overflow: hidden;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cartao-voto-animado::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, var(--novo-blue), var(--novo-orange), var(--novo-blue));
+  animation: girar-borda 4s linear infinite;
+  z-index: 0;
+}
+
+@keyframes girar-borda {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cartao-voto-conteudo {
+  position: relative;
+  z-index: 1;
+  background-color: var(--novo-blue);
+  border-radius: calc(var(--radius-xl) - 2px);
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+}
+
+.cartao-voto-conteudo .modal-titulo {
+  color: var(--novo-orange);
+  margin: 0;
+}
+
+.cartao-voto-conteudo .modal-titulo::first-line {
+  color: var(--novo-white); /* Para contrastar no fundo azul escuro */
+}
+
+/* Botão Azul Modal */
+.botao-azul {
+  gap: var(--space-2);
+  background-color: var(--novo-blue);
+  color: var(--novo-white);
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: filter var(--transition), background var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.botao-azul:hover,
+.botao-azul:focus-visible {
+  filter: brightness(1.1);
+  color: var(--novo-white);
+}
+.modal-cargo {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--novo-white);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: -10px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .modal-cargo {
+    font-size: 0.875rem;
+  }
+}

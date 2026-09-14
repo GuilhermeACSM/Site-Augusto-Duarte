@@ -1,0 +1,916 @@
+@font-face {
+  font-family: 'Open-Dyslexic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-dyslexic.woff') format('woff');
+}
+
+/* ======================================
+   ACESSIBILIDADE.CSS
+   Estilos do menu de acessibilidade e alto contraste
+   ====================================== */
+/* ======================================
+   Widget Flutuante
+   ====================================== */
+.a11y-widget {
+  position: fixed;
+  left: 24px;
+  bottom: 96px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: var(--space-4);
+  pointer-events: none;
+}
+
+.a11y-toggle {
+  pointer-events: auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--novo-orange);
+  color: var(--novo-white);
+  border: 2px solid var(--novo-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.a11y-toggle:hover,
+.a11y-toggle:focus {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ======================================
+   Tooltip Atalho (Alt + A)
+   ====================================== */
+.a11y-tooltip {
+  position: fixed;
+  background: var(--novo-white);
+  color: var(--novo-blue);
+  border: 2px solid var(--novo-orange);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+}
+
+.a11y-tooltip.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.a11y-tooltip strong {
+  color: var(--novo-orange);
+  font-weight: 800;
+}
+
+.a11y-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: var(--novo-orange) transparent transparent transparent;
+}
+
+/* ======================================
+   Menu Expandido
+   ====================================== */
+.a11y-menu {
+  pointer-events: auto;
+  background: var(--novo-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  width: 280px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  visibility: hidden;
+}
+
+.a11y-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.a11y-menu-header {
+  background: var(--color-primary);
+  color: var(--novo-white);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.a11y-fechar {
+  background: transparent;
+  border: none;
+  color: var(--novo-white);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a11y-opcoes {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.a11y-opcoes::-webkit-scrollbar {
+  width: 6px;
+}
+
+.a11y-opcoes::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+.a11y-opcoes::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+.a11y-opcoes::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+.a11y-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-3);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-body);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  text-align: left;
+}
+
+.a11y-btn:hover {
+  background: var(--color-surface);
+  border-color: var(--color-primary);
+}
+
+.a11y-btn.ativo {
+  background-color: var(--novo-orange);
+  color: var(--novo-white);
+  border-color: var(--novo-orange);
+}
+
+.a11y-btn i {
+  font-size: 1.25rem;
+}
+
+.a11y-fonte-grupo {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.a11y-btn-fonte {
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.a11y-dropdown {
+  width: 100%;
+}
+
+.a11y-dropdown-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  /* Remove seta padrão */
+}
+
+.a11y-dropdown-summary::-webkit-details-marker {
+  display: none;
+}
+
+.a11y-dropdown[open] .a11y-dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.a11y-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-border);
+}
+
+.a11y-btn-sub {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.9rem;
+}
+
+/* --- Acessibilidade: Filtros SVG --- */
+html.theme-grayscale {
+  filter: grayscale(100%);
+}
+
+html.theme-protanopia {
+  filter: url('#protanopia');
+}
+
+.a11y-menu-header {
+  background: var(--color-primary);
+  color: var(--novo-white);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.a11y-fechar {
+  background: transparent;
+  border: none;
+  color: var(--novo-white);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a11y-opcoes {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.a11y-opcoes::-webkit-scrollbar {
+  width: 6px;
+}
+
+.a11y-opcoes::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+.a11y-opcoes::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+.a11y-opcoes::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+.a11y-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-3);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-body);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  text-align: left;
+}
+
+.a11y-btn:hover {
+  background: var(--color-surface);
+  border-color: var(--color-primary);
+}
+
+.a11y-btn.ativo {
+  background-color: var(--novo-orange);
+  color: var(--novo-white);
+  border-color: var(--novo-orange);
+}
+
+.a11y-btn i {
+  font-size: 1.25rem;
+}
+
+.a11y-fonte-grupo {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.a11y-btn-fonte {
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.a11y-dropdown {
+  width: 100%;
+}
+
+.a11y-dropdown-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  /* Remove seta padrão */
+}
+
+.a11y-dropdown-summary::-webkit-details-marker {
+  display: none;
+}
+
+.a11y-dropdown[open] .a11y-dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.a11y-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-border);
+}
+
+.a11y-btn-sub {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.9rem;
+}
+
+/* --- Acessibilidade: Filtros SVG --- */
+html.theme-grayscale {
+  filter: grayscale(100%);
+}
+
+html.theme-protanopia {
+  filter: url('#protanopia');
+}
+
+html.theme-deuteranopia {
+  filter: url('#deuteranopia');
+}
+
+html.theme-tritanopia {
+  filter: url('#tritanopia');
+}
+
+/* --- Acessibilidade: Alto Contraste Escuro (Identidade da Campanha: Preto & Laranja Oficial) --- */
+html.theme-high-contrast {
+  /* Override Variables para o Modo Escuro Oficial */
+  --novo-orange: #ff7700;
+  --novo-blue: #000000;
+  --novo-yellow: #ff7700;
+  --novo-green: #ff7700;
+  --novo-white: #000000;
+
+  --color-bg: #000000;
+  --color-surface: #000000;
+  --color-primary: #ff7700;
+  --color-secondary: #000000;
+  --color-text: #FFFFFF;
+  --color-muted: #FFFFFF;
+  --color-border: #ff7700;
+  --color-card: #000000;
+}
+
+html.theme-high-contrast body,
+html.theme-high-contrast main,
+html.theme-high-contrast header,
+html.theme-high-contrast footer,
+html.theme-high-contrast section,
+html.theme-high-contrast article,
+html.theme-high-contrast nav {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+html.theme-high-contrast h1,
+html.theme-high-contrast h2,
+html.theme-high-contrast h3,
+html.theme-high-contrast h4,
+html.theme-high-contrast h5,
+html.theme-high-contrast h6,
+html.theme-high-contrast p,
+html.theme-high-contrast li {
+  color: #FFFFFF;
+}
+
+/* Captura todas as classes estruturais */
+html.theme-high-contrast:root body :is([class*="card"], [class*="destaque"], [class*="banner"], [class*="secao"], [class*="cabecalho"], [class*="rodape"], [class*="box"], [class*="container"], [class*="historia"], main) {
+  background-image: none;
+  background-color: #000000;
+  color: #FFFFFF;
+  border-color: #ff7700;
+}
+
+html.theme-high-contrast:root body .a11y-topbar {
+  border-bottom: 2px solid #ff7700;
+}
+
+/* Fix para a Logo (remover fundo e padding que pareciam borda no alto contraste escuro) */
+html.theme-high-contrast:root body .cabecalho-logo img {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  filter: contrast(120%) grayscale(100%);
+}
+
+/* Fix para as laterais das Leis no Legado */
+html.theme-high-contrast:root body .lei-lateral {
+  background-color: #ff7700;
+  color: #000000;
+  border-right: 2px solid #ff7700;
+}
+
+html.theme-high-contrast:root body .lei-lateral * {
+  color: #000000;
+}
+
+/* Interatividade e Foco */
+html.theme-high-contrast a,
+html.theme-high-contrast a *,
+html.theme-high-contrast button {
+  color: #ff7700;
+}
+
+html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook) {
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #ff7700 !important;
+  border: 1px solid #ff7700 !important;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) {
+  background-color: #ff7700 !important;
+  color: #000000 !important;
+}
+
+html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) * {
+  color: #000000 !important;
+}
+
+html.theme-high-contrast:root body .a11y-btn.ativo,
+html.theme-high-contrast:root body .a11y-topbar-btn.ativo {
+  background-color: #ff7700;
+  color: #000000;
+  font-weight: bold;
+}
+
+html.theme-high-contrast:root body .a11y-btn.ativo *,
+html.theme-high-contrast:root body .a11y-topbar-btn.ativo * {
+  color: #000000;
+}
+
+html.theme-high-contrast:root body .faixa-cores * {
+  background-color: #ff7700;
+}
+
+html.theme-high-contrast:root body .badge-flutuante,
+html.theme-high-contrast:root body .selo-campanha {
+  background-color: #ff7700;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+html.theme-high-contrast:root body .badge-flutuante *,
+html.theme-high-contrast:root body .selo-campanha * {
+  color: #ffffff;
+}
+
+html.theme-high-contrast:root body :is(.badge-flutuante, .selo-campanha):is(:hover, :focus) {
+  background-color: #e66000;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+html.theme-high-contrast:root body :is(.badge-flutuante, .selo-campanha):is(:hover, :focus) * {
+  color: #ffffff;
+}
+
+html.theme-high-contrast img,
+html.theme-high-contrast video {
+  filter: contrast(120%) grayscale(100%);
+}
+
+html.theme-high-contrast :focus-visible {
+  outline: 4px solid #ff7700;
+  outline-offset: 2px;
+}
+
+/* --- Acessibilidade: Alto Contraste Claro (Identidade da Campanha: Branco, Azul Marinho NOVO & Laranja Acessível) --- */
+html.theme-high-contrast-light {
+  /* Override Variables para o Modo Claro Oficial */
+  --novo-orange: #002b49;
+  --novo-blue: #FFFFFF;
+  --novo-yellow: #b43b00;
+  --novo-green: #002b49;
+  --novo-white: #FFFFFF;
+
+  --color-bg: #FFFFFF;
+  --color-surface: #FFFFFF;
+  --color-primary: #002b49;
+  --color-secondary: #FFFFFF;
+  --color-text: #000000;
+  --color-muted: #000000;
+  --color-border: #002b49;
+  --color-card: #FFFFFF;
+}
+
+html.theme-high-contrast-light body,
+html.theme-high-contrast-light main,
+html.theme-high-contrast-light header,
+html.theme-high-contrast-light footer,
+html.theme-high-contrast-light section,
+html.theme-high-contrast-light article,
+html.theme-high-contrast-light nav {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+html.theme-high-contrast-light h1,
+html.theme-high-contrast-light h2,
+html.theme-high-contrast-light h3,
+html.theme-high-contrast-light h4,
+html.theme-high-contrast-light h5,
+html.theme-high-contrast-light h6,
+html.theme-high-contrast-light p,
+html.theme-high-contrast-light li {
+  color: #000000;
+}
+
+/* Captura todas as classes estruturais */
+html.theme-high-contrast-light:root body :is([class*="card"], [class*="destaque"], [class*="banner"], [class*="secao"], [class*="cabecalho"], [class*="rodape"], [class*="box"], [class*="container"], [class*="historia"], main) {
+  background-image: none;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-color: #002b49;
+}
+
+html.theme-high-contrast-light:root body .a11y-topbar {
+  border-bottom: 2px solid #002b49;
+}
+
+/* Fix para a Logo (garantir visibilidade e escala de cinza no alto contraste) */
+html.theme-high-contrast-light:root body .cabecalho-logo img {
+  filter: contrast(120%) grayscale(100%);
+}
+
+/* Fix para as laterais das Leis no Legado */
+html.theme-high-contrast-light:root body .lei-lateral {
+  background-color: #002b49;
+  color: #FFFFFF;
+  border-right: 2px solid #002b49;
+}
+
+html.theme-high-contrast-light:root body .lei-lateral * {
+  color: #FFFFFF;
+}
+
+/* Interatividade e Foco */
+html.theme-high-contrast-light a,
+html.theme-high-contrast-light a *,
+html.theme-high-contrast-light button {
+  color: #002b49;
+}
+
+html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook) {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+  color: #002b49 !important;
+  border: 1px solid #002b49 !important;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) {
+  background-color: #002b49 !important;
+  color: #FFFFFF !important;
+}
+
+html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) * {
+  color: #FFFFFF !important;
+}
+
+html.theme-high-contrast-light:root body .a11y-btn.ativo,
+html.theme-high-contrast-light:root body .a11y-topbar-btn.ativo {
+  background-color: #002b49;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+html.theme-high-contrast-light:root body .a11y-btn.ativo *,
+html.theme-high-contrast-light:root body .a11y-topbar-btn.ativo * {
+  color: #FFFFFF;
+}
+
+html.theme-high-contrast-light:root body .faixa-cores * {
+  background-color: #002b49;
+}
+
+html.theme-high-contrast-light:root body .badge-flutuante,
+html.theme-high-contrast-light:root body .selo-campanha {
+  background-color: #002b49;
+  border: 2px solid #002b49;
+}
+
+html.theme-high-contrast-light:root body .badge-flutuante *,
+html.theme-high-contrast-light:root body .selo-campanha * {
+  color: #FFFFFF;
+}
+
+html.theme-high-contrast-light img,
+html.theme-high-contrast-light video {
+  filter: contrast(120%) grayscale(100%);
+}
+
+html.theme-high-contrast-light :focus-visible {
+  outline: 4px solid #002b49;
+  outline-offset: 2px;
+}
+
+/* ======================================
+   Fonte para Dislexia (OpenDyslexic)
+   ====================================== */
+html:root body.fonte-dislexia,
+html:root body.fonte-dislexia :is(h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, textarea, label, strong, em, b, blockquote, div, .banner-titulo, .secao-titulo, .banner-tag, .secao-tag, [class*="titulo"]):not(i):not([class*="ph"]):not([class*="icone"]) {
+  font-family: 'Open-Dyslexic', 'Comic Sans MS', sans-serif;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  word-break: break-word;
+}
+
+@media (min-width: 992px) {
+
+  body.fonte-dislexia h1,
+  body.fonte-dislexia h2,
+  body.fonte-dislexia .banner-titulo,
+  body.fonte-dislexia .secao-titulo {
+    font-size: 3.5rem;
+  }
+}
+
+/* ======================================
+   Cursor Grande
+   ====================================== */
+body.cursor-grande,
+body.cursor-grande * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' stroke='%23FFF' stroke-width='2' d='M2 2l12 28 4-12 12-4z'/%3E%3C/svg%3E"), auto;
+}
+
+/* ======================================
+   Espacamento Extra
+   ====================================== */
+body.espacamento-texto,
+body.espacamento-texto p,
+body.espacamento-texto li,
+body.espacamento-texto span,
+body.espacamento-texto a {
+  line-height: 2;
+  letter-spacing: 0.1em;
+  word-spacing: 0.2em;
+}
+
+/* ======================================
+   Mascara de Leitura
+   ====================================== */
+.reading-mask {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  width: 100vw;
+  height: 100px;
+  pointer-events: none;
+  z-index: 9998;
+  outline: 4000px solid rgba(0, 0, 0, 0.65);
+  transform: translateY(-50%);
+  display: none;
+}
+
+body.mascara-leitura .reading-mask {
+  display: block;
+}
+
+/* ======================================
+   Pausar Animações (Reduce Motion)
+   ====================================== */
+body.sem-animacao *,
+body.sem-animacao *::before,
+body.sem-animacao *::after {
+  animation-duration: 0.01ms;
+  animation-iteration-count: 1;
+  transition-duration: 0.01ms;
+  scroll-behavior: auto;
+}
+
+/* ======================================
+   Barra Superior de Acessibilidade (eMAG)
+   ====================================== */
+.a11y-topbar {
+  background-color: var(--novo-blue);
+  color: var(--novo-white);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  z-index: 1000;
+  position: relative;
+}
+
+.a11y-topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.a11y-topbar-left {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.a11y-topbar-right {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.a11y-skip-link {
+  color: var(--novo-white);
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, color 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.a11y-skip-link:hover,
+.a11y-skip-link:focus {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--novo-white);
+  border-color: var(--novo-white);
+}
+
+.a11y-topbar-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--novo-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.a11y-topbar-btn:hover,
+.a11y-topbar-btn:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--novo-white);
+}
+
+.a11y-topbar-btn.ativo {
+  background: var(--novo-white);
+  color: var(--novo-blue);
+  font-weight: 700;
+  border-color: var(--novo-white);
+}
+
+body.alto-contraste .a11y-topbar {
+  background: #000;
+  border-bottom: 1px solid #FFFF00;
+}
+
+body.alto-contraste .a11y-topbar-btn,
+body.alto-contraste .a11y-skip-link {
+  color: #FFFF00;
+}
+
+/* === Responsividade da Barra Superior === */
+@media (max-width: 879px) {
+  .a11y-topbar {
+    display: none;
+  }
+}
+
+@media (min-width: 880px) and (max-width: 1212px) {
+  .texto-a11y-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 880px) and (max-width: 992px) {
+  .a11y-topbar .container {
+    justify-content: center;
+  }
+
+  .a11y-topbar-right {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  #a11y-shortcut-tooltip {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+/* ======================================
+   Destacar Links
+   ====================================== */
+html:root body:is(.destacar-links, .links-destacados) :is(main, nav, footer, header, section, article, div, p, li) a:not(.cabecalho-logo):not(.a11y-skip-link):not(.a11y-btn):not(.a11y-toggle):not(.a11y-topbar-btn):not(.botao-whatsapp):not(.btn-fechar):not(.modal-overlay *) {
+  background-color: #ffeb3b !important;
+  background-image: none !important;
+  color: #000000 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 3px !important;
+  font-weight: 700 !important;
+  outline: 2px solid #000000 !important;
+  outline-offset: 1px !important;
+  border-radius: 2px !important;
+}
+
+html:root body:is(.destacar-links, .links-destacados) :is(main, nav, footer, header, section, article, div, p, li) a:not(.cabecalho-logo):not(.a11y-skip-link):not(.a11y-btn):not(.a11y-toggle):not(.a11y-topbar-btn):not(.botao-whatsapp):not(.btn-fechar):not(.modal-overlay *) * {
+  color: #000000 !important;
+}
+
+html:root body:is(.destacar-links, .links-destacados) :is(main, nav, footer, header, section, article, div, p, li) a:not(.cabecalho-logo):not(.a11y-skip-link):not(.a11y-btn):not(.a11y-toggle):not(.a11y-topbar-btn):not(.botao-whatsapp):not(.btn-fechar):not(.modal-overlay *):hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  outline: 2px solid #ffeb3b !important;
+  box-shadow: 0 0 0 2px #000000 !important;
+}
+
+html:root body:is(.destacar-links, .links-destacados) :is(main, nav, footer, header, section, article, div, p, li) a:not(.cabecalho-logo):not(.a11y-skip-link):not(.a11y-btn):not(.a11y-toggle):not(.a11y-topbar-btn):not(.botao-whatsapp):not(.btn-fechar):not(.modal-overlay *):hover * {
+  color: #ffffff !important;
+}
+/* Ajuste de Contraste para o Tooltip de Acessibilidade */
+html.theme-high-contrast .a11y-tooltip {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #ff7700;
+}
+html.theme-high-contrast .a11y-tooltip strong {
+  color: #ff7700;
+}
+html.theme-high-contrast .a11y-tooltip::after {
+  border-top-color: #ff7700;
+}
+
+html.theme-high-contrast-light .a11y-tooltip {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #002b49;
+}
+html.theme-high-contrast-light .a11y-tooltip strong {
+  color: #002b49;
+}
+html.theme-high-contrast-light .a11y-tooltip::after {
+  border-top-color: #002b49;
+}

@@ -1,0 +1,32 @@
+====================================================
+GUIA FUTURO DE SEO E DEPLOY - SITE AUGUSTO DUARTE
+====================================================
+
+Quando o site for publicado oficialmente (ex: hospedado na Hostinger, Vercel, Netlify) e tiver um domínio comprado (ex: www.augustoduarte.com.br), você precisará fazer as seguintes adições nos arquivos HTML para finalizar o SEO avançado:
+
+1. ATUALIZAR A TAG "OG:URL"
+Em TODOS os arquivos HTML (index.html e dentro da pasta pages/), você deve adicionar a tag "og:url" dentro da tag <head>. Isso garante que, quando alguém compartilhar o link no WhatsApp, Facebook ou LinkedIn, a plataforma entenda exatamente qual é o link oficial.
+
+O que adicionar (exemplo para o index.html):
+<meta property="og:url" content="https://www.seusite.com.br" />
+
+Para as páginas internas (exemplo para visao.html):
+<meta property="og:url" content="https://www.seusite.com.br/pages/visao.html" />
+
+2. CADASTRAR O SITE NO GOOGLE SEARCH CONSOLE
+- Acesse: https://search.google.com/search-console
+- Adicione a propriedade do seu domínio.
+- Isso fará com que o Google "descubra" seu site mais rápido e passe a exibi-lo nas buscas por "Augusto Duarte".
+
+3. CRIAR UM ARQUIVO ROBOTS.TXT e SITEMAP.XML (Opcional, mas recomendado)
+- Um arquivo robots.txt na raiz do projeto com:
+  User-agent: *
+  Allow: /
+- Isso garante que o Google tenha permissão para ler tudo.
+
+====================================================
+Lembrete: Seu site já está incrivelmente otimizado!
+Você já tem Meta Descriptions, Meta Titles únicas por página,
+imagens leves em WebP e código semântico.
+Isso aqui é apenas o toque final.
+====================================================

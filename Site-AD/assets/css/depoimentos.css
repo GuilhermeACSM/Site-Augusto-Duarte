@@ -1,0 +1,60 @@
+﻿/* ======================================
+   Página de Depoimentos - Estilos Específicos
+   ====================================== */
+/* Upload de Arquivo */
+.form-upload {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+.upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--novo-white);
+    color: var(--color-text-light);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+.upload-label:hover,
+input[type="file"]:focus-visible ~ .upload-label {
+    border-color: var(--novo-orange);
+    color: var(--novo-orange);
+    background-color: rgba(255, 107, 0, 0.05); /* Laranja clarinho */
+}
+input[type="file"]:focus-visible ~ .upload-label {
+    outline: 2px solid var(--novo-orange);
+    outline-offset: 2px;
+}
+.upload-label i {
+    font-size: 1.5rem;
+}
+.nome-arquivo {
+    font-size: 0.875rem;
+    color: var(--novo-blue);
+    font-weight: 500;
+    min-height: 20px;
+}
+/* Modificadores Visuais do Formulário */
+.cadastro-titulo {
+    text-transform: uppercase;
+}
+/* Acessibilidade - Alto Contraste */
+body.alto-contraste .upload-label {
+    background-color: #000;
+    border-color: #FFF;
+    color: #FFF;
+}
+body.alto-contraste .upload-label:hover,
+body.alto-contraste .upload-label:focus-within {
+    border-color: #FF0;
+    color: #FF0;
+}
+body.alto-contraste .nome-arquivo {
+    color: #FF0;
+}

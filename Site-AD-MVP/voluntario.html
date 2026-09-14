@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="assets/images/webp/Logo-Circular.webp" rel="icon" type="image/webp" />
+  <title>Augusto Duarte · Voluntário e Contato</title>
+  <meta
+    content="Faça parte do time de voluntários da campanha de Augusto Duarte. Junte-se a nós para espalhar a mensagem do NOVO 30."
+    name="description" />
+  <link rel="canonical" href="https://www.augustoduarte.com.br/voluntario.html" />
+  <meta name="robots" content="index, follow" />
+
+  <meta content="website" property="og:type" />
+  <meta content="https://www.augustoduarte.com.br/voluntario.html" property="og:url" />
+  <meta content="Augusto Duarte · Seja Voluntário" property="og:title" />
+  <meta
+    content="Faça parte do time de voluntários da campanha de Augusto Duarte. Junte-se a nós para espalhar a mensagem do NOVO 30."
+    property="og:description" />
+  <meta content="https://www.augustoduarte.com.br/assets/images/webp/Imagem-Augusto-Duarte-Links.webp"
+    property="og:image" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.augustoduarte.com.br/voluntario.html" />
+  <meta property="twitter:title" content="Augusto Duarte · Seja Voluntário" />
+  <meta property="twitter:description"
+    content="Faça parte do time de voluntários da campanha de Augusto Duarte. Junte-se a nós para espalhar a mensagem do NOVO 30." />
+  <meta property="twitter:image"
+    content="https://www.augustoduarte.com.br/assets/images/webp/Imagem-Augusto-Duarte-Links.webp" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Seja Voluntário na Campanha de Augusto Duarte",
+    "url": "https://www.augustoduarte.com.br/voluntario.html",
+    "description": "Faça parte do time de voluntários da campanha de Augusto Duarte. Junte-se a nós para espalhar a mensagem do NOVO 30.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Augusto Duarte"
+    }
+  }
+  </script>
+
+  <link href="assets/css/global.css?v=1" rel="stylesheet" />
+  <link href="assets/css/voluntario.css" rel="stylesheet" />
+  <link href="assets/css/fonts.css" rel="stylesheet" />
+  <link href="assets/css/phosphor.css" rel="stylesheet" />
+  <link href="assets/css/acessibilidade.css?v=8" rel="stylesheet" />
+  <link href="assets/css/loader.css" rel="stylesheet" />
+  <link href="assets/css/modal.css" rel="stylesheet" />
+</head>
+
+<body>
+  <script src="assets/js/loader.js"></script>
+
+  <!-- Filtros SVG de Acessibilidade (Daltonismo) -->
+  <svg class="svg-filtros" aria-hidden="true" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="protanopia">
+        <feColorMatrix type="matrix"
+          values="0.567, 0.433, 0, 0, 0  0.558, 0.442, 0, 0, 0  0, 0.242, 0.758, 0, 0  0, 0, 0, 1, 0" />
+      </filter>
+      <filter id="deuteranopia">
+        <feColorMatrix type="matrix"
+          values="0.625, 0.375, 0, 0, 0  0.7, 0.3, 0, 0, 0  0, 0.3, 0.7, 0, 0  0, 0, 0, 1, 0" />
+      </filter>
+      <filter id="tritanopia">
+        <feColorMatrix type="matrix"
+          values="0.95, 0.05, 0, 0, 0  0, 0.433, 0.567, 0, 0  0, 0.475, 0.525, 0, 0  0, 0, 0, 1, 0" />
+      </filter>
+      <filter id="acromatopsia">
+        <feColorMatrix type="matrix"
+          values="0.299, 0.587, 0.114, 0, 0  0.299, 0.587, 0.114, 0, 0  0.299, 0.587, 0.114, 0, 0  0, 0, 0, 1, 0" />
+      </filter>
+    </defs>
+  </svg>
+  <!-- Barra Superior de Acessibilidade (eMAG) -->
+  <div class="a11y-topbar">
+    <div class="container">
+      <div class="a11y-topbar-left">
+        <a href="#conteudo-principal" class="a11y-skip-link" accesskey="1">Ir para o conteúdo (Alt+1)</a>
+        <a href="#menu-principal" class="a11y-skip-link" accesskey="2">Ir para o menu (Alt+2)</a>
+        <a href="#rodape-principal" class="a11y-skip-link" accesskey="3">Ir para o rodapé (Alt+3)</a>
+      </div>
+      <div class="a11y-topbar-right">
+        <button class="a11y-topbar-btn" id="top-btn-fonte-aumentar" title="Aumentar Fonte"
+          aria-label="Aumentar Fonte">A+</button>
+        <button class="a11y-topbar-btn" id="top-btn-fonte-diminuir" title="Diminuir Fonte"
+          aria-label="Diminuir Fonte">A-</button>
+        <button class="a11y-topbar-btn" id="top-btn-alto-contraste" title="Alto Contraste"
+          aria-label="Alternar Alto Contraste" aria-pressed="false"><i class="ph ph-circle-half-tilt"
+            aria-hidden="true"></i> <span class="texto-a11y-btn">Contraste</span></button>
+        <button class="a11y-topbar-btn" id="top-btn-daltonismo" title="Escala de Cinza"
+          aria-label="Alternar Escala de Cinza" aria-pressed="false"><i class="ph ph-eye" aria-hidden="true"></i> <span
+            class="texto-a11y-btn">Escala de Cinza</span></button>
+        <button class="a11y-topbar-btn" id="top-btn-animacoes" title="Parar Animações" aria-label="Parar Animações"><i
+            class="ph ph-play-pause" aria-hidden="true"></i> <span class="texto-a11y-btn">Animações</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="skeleton-overlay" id="skeleton-overlay">
+    <div class="skeleton-header">
+      <div class="skeleton-element skeleton-logo"></div>
+      <div class="skeleton-element skeleton-nav"></div>
+    </div>
+    <div class="skeleton-body">
+      <div class="skeleton-element skeleton-title"></div>
+      <div class="skeleton-element skeleton-text"></div>
+      <div class="skeleton-element skeleton-text short"></div>
+      <div class="skeleton-cards">
+        <div class="skeleton-element skeleton-card"></div>
+        <div class="skeleton-element skeleton-card"></div>
+        <div class="skeleton-element skeleton-card"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================
+       Cabeçalho (Header)
+       ====================================== -->
+  <header class="cabecalho" role="banner" id="menu-principal">
+    <div class="container cabecalho-conteudo">
+      <a aria-label="Augusto Duarte — Página Inicial" class="cabecalho-logo" href="index.html">
+        <img alt="Logo Oficial Augusto Duarte - Campanha para Deputado Estadual 30633"
+          src="assets/images/webp/ad-logo.webp" />
+        <span aria-hidden="true" class="cabecalho-logo-divisor"></span>
+        <span class="cabecalho-logo-texto">
+          <strong>AUGUSTO DUARTE</strong>
+          <span class="logo-subtitulo">DEPUTADO ESTADUAL 30633</span>
+        </span>
+      </a>
+      <div class="cabecalho-acoes">
+        <a class="botao-principal visivel-header" href="voluntario.html" aria-current="page" id="cabecalho-cta">Junte-se
+          à Campanha</a>
+        <button aria-controls="nav-mobile" aria-expanded="false" aria-label="Abrir menu" class="botao-menu">
+          <span class="botao-menu-texto">MENU</span>
+          <div class="botao-menu-barras">
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+    <nav aria-hidden="true" aria-label="Navegação mobile" class="nav-mobile" id="nav-mobile">
+      <div class="nav-mobile-container">
+        <div class="nav-mobile-grupo">
+          <span class="nav-mobile-titulo">Conheça</span>
+          <a href="index.html">Início</a>
+          <a href="trajetoria.html">Trajetória</a>
+          <a href="legado.html">Legado</a>
+          <a href="visao.html">Visão Estadual</a>
+          <a href="voluntario.html">Seja Voluntário</a>
+        </div>
+        <div class="nav-mobile-grupo">
+          <span class="nav-mobile-titulo">Transparência</span>
+          <a href="acessibilidade-info.html">Acessibilidade</a>
+          <a href="mapa.html">Mapa do Site</a>
+          <a href="privacidade.html">Privacidade</a>
+        </div>
+        <div class="nav-mobile-acoes">
+          <a class="botao-principal btn-mobile-junte-se" href="voluntario.html">Junte-se à Campanha</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="conteudo-principal" role="main">
+    <!-- ======================================
+         Breadcrumb
+         ====================================== -->
+    <nav aria-label="Breadcrumb" class="breadcrumb-container">
+      <div class="container">
+        <ol class="breadcrumb-lista">
+          <li><a href="index.html">Início</a></li>
+          <li aria-current="page">Seja Voluntário</li>
+        </ol>
+      </div>
+    </nav>
+    <!-- ======================================
+         Banner Voluntário
+         ====================================== -->
+    <section aria-labelledby="banner-voluntario-titulo" class="banner" id="inicio">
+      <div class="container banner-conteudo banner-conteudo-centralizado">
+        <div class="banner-texto reveal-left">
+          <span class="banner-tag">FAÇA PARTE DO TIME</span>
+          <h1 class="banner-titulo" id="banner-voluntario-titulo">
+            Seja<br /><em>Voluntário</em>
+          </h1>
+          <p class="banner-descricao">
+            Junte-se a nós para espalhar a mensagem do NOVO 30 para todo o estado de São Paulo.
+          </p>
+        </div>
+        <div class="banner-imagem reveal-right">
+          <img alt="Augusto Duarte sorrindo, vestindo camiseta preta, com os punhos cerrados em pose de determinação."
+            src="assets/images/webp/banner_voluntario.webp" />
+        </div>
+      </div>
+      <div aria-hidden="true" class="faixa-cores">
+        <div class="faixa-cores-laranja"></div>
+        <div class="faixa-cores-amarelo"></div>
+        <div class="faixa-cores-verde"></div>
+        <div class="faixa-cores-branco"></div>
+      </div>
+    </section>
+    <!-- ======================================
+         Conteúdo Voluntário
+         ====================================== -->
+    <section class="secao voluntario-conteudo-secao">
+      <div class="container voluntario-grid reveal">
+        <!-- Lado Esquerdo: Como Ajudar -->
+        <div class="como-ajudar">
+          <h2 class="sr-only">Instruções para Voluntários</h2>
+          <div class="aviso-card">
+            <i aria-hidden="true" class="ph ph-info"></i>
+            <p>Sua inscrição passará por uma análise da nossa equipe de coordenação. A resposta não é imediata, mas
+              entraremos em contato em breve para alinhar os próximos passos!</p>
+          </div>
+          <h2 class="como-ajudar-titulo">COMO VOCÊ PODE AJUDAR</h2>
+          <ul class="como-ajudar-lista" role="list">
+            <li>
+              <i aria-hidden="true" class="ph ph-megaphone"></i>
+              <div>
+                <h3>Mobilização nas redes</h3>
+                <p>Compartilhe conteúdos e amplie a mensagem da campanha.</p>
+                <div class="como-ajudar-botoes">
+                  <a class="botao-social" href="https://www.instagram.com/augustoduarteoficial/" rel="noreferrer"
+                    target="_blank">
+                    <span class="texto-social">INSTAGRAM</span> <i class="ph ph-instagram-logo"></i>
+                  </a>
+                  <a class="botao-social" href="https://www.facebook.com/souaugustoduarte" rel="noreferrer"
+                    target="_blank">
+                    <span class="texto-social">FACEBOOK</span> <i class="ph ph-facebook-logo"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <i aria-hidden="true" class="ph ph-users"></i>
+              <div>
+                <h3>Ações no seu bairro</h3>
+                <p>Organize encontros e leve demandas reais ao candidato.</p>
+              </div>
+            </li>
+            <li>
+              <i aria-hidden="true" class="ph ph-chats"></i>
+              <div>
+                <h3>Boca a boca</h3>
+                <p>Apresente a candidatura a vizinhos, família e amigos.</p>
+              </div>
+            </li>
+            <li>
+              <i aria-hidden="true" class="ph ph-heart"></i>
+              <div>
+                <h3>Apoio em eventos</h3>
+                <p>Esteja presente nas atividades da campanha em sua cidade.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Lado Direito: Formulário -->
+        <div class="cadastro-voluntario">
+          <h2 class="cadastro-titulo">CADASTRO DE VOLUNTÁRIO</h2>
+          <form action="#" class="form-voluntario" id="form-voluntario" method="POST">
+            <div class="form-linha">
+              <div class="form-grupo">
+                <label class="sr-only" for="nome">Nome completo</label>
+                <input id="nome" name="nome" placeholder="Nome completo *" required type="text" />
+              </div>
+              <div class="form-grupo">
+                <label class="sr-only" for="apelido">Apelido / Nome Social</label>
+                <input id="apelido" name="apelido" placeholder="Apelido / Nome Social (opcional)" type="text" />
+              </div>
+            </div>
+            <div class="form-linha">
+              <div class="form-grupo">
+                <label class="sr-only" for="email">E-mail</label>
+                <input id="email" name="email" placeholder="E-mail *" required type="email" />
+              </div>
+              <div class="form-grupo">
+                <label class="sr-only" for="telefone">Telefone / WhatsApp</label>
+                <input id="telefone" name="telefone" placeholder="Telefone / WhatsApp *" required type="tel" />
+              </div>
+            </div>
+            <div class="form-grupo">
+              <label class="sr-only" for="bairro">Bairro e cidade: (ex.: Gonzaga/Santos)</label>
+              <input id="bairro" name="bairro" placeholder="Bairro e cidade: (ex.: Gonzaga/Santos) *" required
+                type="text" />
+            </div>
+            <div class="form-grupo mt-4">
+              <label class="sr-only" for="como-ajudar">Como quer ajudar?</label>
+              <!-- TODO (Backend): No futuro este select será populado dinamicamente via backend para adicionar novos tópicos para o formulário para ficar mais fácil de gerenciar opções -->
+              <select id="como-ajudar" name="como_ajudar" class="form-select">
+                <option value="">Como você gostaria de ajudar? (Opcional)</option>
+                <option value="redes_sociais">Redes sociais</option>
+                <option value="acoes_rua">Ações de rua</option>
+                <option value="eventos">Eventos</option>
+                <option value="apoio_juridico">Apoio jurídico/técnico</option>
+              </select>
+            </div>
+
+            <div class="form-grupo mt-4">
+              <label class="sr-only" for="voluntario-mensagem">Sua mensagem</label>
+              <textarea id="voluntario-mensagem" name="mensagem"
+                placeholder="Conte para o Augusto sua sugestão, demanda ou apoio... (Opcional)" rows="4"></textarea>
+            </div>
+
+            <div class="lgpd-bloco">
+              <p>Seus dados (nome, e-mail, telefone e bairro) serão usados para que a equipe de campanha entre em
+                contato com você sobre oportunidades de voluntariado e eventos da campanha via WhatsApp ou e-mail. Não
+                compartilhamos suas informações com terceiros.</p>
+              <label class="checkbox-lgpd">
+                <input type="checkbox" name="lgpd_politica" required>
+                <span class="checkmark"></span>
+                <span>Li e concordo com a <a href="privacidade.html">Política de Privacidade</a> (v1.0) *</span>
+              </label>
+              <label class="checkbox-lgpd">
+                <input type="checkbox" name="lgpd_comunicacoes">
+                <span class="checkmark"></span>
+                <span>Aceito receber informações e atualizações da campanha.</span>
+              </label>
+            </div>
+            <button class="botao-submit" type="submit">QUERO SER VOLUNTÁRIO</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================
+       Rodapé (Footer)
+       ====================================== -->
+    <footer class="rodape" role="contentinfo" id="rodape-principal">
+      <div class="container rodape-grade">
+        <div class="rodape-marca">
+          <img alt="Logo Oficial Augusto Duarte - Campanha para Deputado Estadual 30633" class="rodape-logo"
+            loading="lazy" src="assets/images/webp/ad-logo.webp" />
+          <p class="rodape-slogan">NOVO: A Gente Respeita o Brasil</p>
+          <p class="rodape-sobre">
+            Augusto Duarte Moreira Neto — Candidato a Deputado Estadual por São Paulo.
+            Vereador em Santos e ex-Secretário de Habitação. Gestão, resultado e respeito ao pagador de impostos.
+          </p>
+        </div>
+        <nav aria-label="Links rápidos do rodapé" class="rodape-nav-colunas">
+          <div>
+            <h3 class="rodape-nav-titulo">Conheça</h3>
+            <ul class="rodape-nav-lista">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="trajetoria.html">Trajetória</a></li>
+              <li><a href="legado.html">Legado</a></li>
+              <li><a href="visao.html">Visão Estadual</a></li>
+              <li><a href="voluntario.html">Seja Voluntário</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="rodape-nav-titulo">Transparência</h3>
+            <ul class="rodape-nav-lista">
+              <li><a href="acessibilidade-info.html">Acessibilidade</a></li>
+              <li><a href="mapa.html">Mapa do Site</a></li>
+              <li><a href="privacidade.html">Privacidade</a></li>
+            </ul>
+          </div>
+        </nav>
+        <address class="rodape-conexao">
+          <h3 class="rodape-nav-titulo">Conecte-se</h3>
+          <div aria-label="Redes sociais" class="rodape-social">
+            <a aria-label="Instagram" href="https://www.instagram.com/augustoduarteoficial/" rel="noreferrer"
+              target="_blank">
+              <i class="ph ph-instagram-logo"></i>
+            </a>
+            <a aria-label="Facebook" href="https://www.facebook.com/souaugustoduarte" rel="noreferrer" target="_blank">
+              <i class="ph ph-facebook-logo"></i>
+            </a>
+          </div>
+          <a class="rodape-link" href="https://novo.org.br" rel="noreferrer" target="_blank">Jornada NOVO →</a>
+          <a class="rodape-link" href="https://novo.org.br/filie-se" rel="noreferrer" target="_blank">Filie-se ao
+            NOVO →</a>
+          <div class="rodape-endereco">
+            <div class="rodape-endereco-titulo">
+              <i aria-hidden="true" class="ph ph-map-pin"></i>
+              <span>Comitê de Campanha</span>
+            </div>
+            <p class="rodape-endereco-texto">
+              Rua Azevedo Sodré, 142<br />
+              Santos — SP
+            </p>
+            <a class="rodape-endereco-mapa"
+              href="https://www.google.com/maps/search/Rua+Azevedo+Sodr%C3%A9+142+Santos+SP" rel="noreferrer"
+              target="_blank">
+              <i aria-hidden="true" class="ph ph-navigation-arrow icone-mini"></i>
+              Ver no mapa
+            </a>
+          </div>
+        </address>
+      </div>
+      <div aria-hidden="true" class="faixa-cores">
+        <div class="faixa-cores-laranja"></div>
+        <div class="faixa-cores-amarelo"></div>
+        <div class="faixa-cores-verde"></div>
+        <div class="faixa-cores-azul"></div>
+      </div>
+      <div class="rodape-inferior">
+        <div class="container rodape-inferior-conteudo">
+          <span class="rodape-inferior-marca">NOVO 30 · Deputado Estadual · SP</span>
+          <span>CNPJ da campanha 68.236.031/0001-80 — Propaganda eleitoral conforme Lei nº 9.504/97</span>
+          <span>© 2026 Augusto Duarte</span>
+        </div>
+      </div>
+    </footer>
+    <!-- ======================================
+       WhatsApp Flutuante
+       ====================================== -->
+    <a aria-label="Fale no WhatsApp" class="botao-whatsapp"
+      href="https://wa.me/5513996554500?text=Ol%C3%A1%21%20Gostaria%20de%20fazer%20parte%20da%20campanha%20do%20Augusto%20Duarte."
+      rel="noreferrer" target="_blank">
+      <i class="ph ph-whatsapp-logo icone-grande"></i>
+    </a>
+
+    <!-- Badge Flutuante 30633 -->
+    <a href="index.html#inicio" class="badge-flutuante visivel" id="badge-flutuante" aria-label="Vote Augusto 30633">
+      <div class="badge-flutuante-texto">Vote<br>Augusto</div>
+      <div class="badge-flutuante-numero">30633</div>
+    </a>
+    <!-- ======================================
+         VLibras Widget
+         ====================================== -->
+    <div class="enabled" vw="">
+      <div class="active" vw-access-button=""></div>
+      <div vw-plugin-wrapper="">
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <!-- ======================================
+         Menu de Acessibilidade
+         ====================================== -->
+    <div class="a11y-widget" id="a11y-widget">
+      <button aria-expanded="false" aria-label="Abrir menu de acessibilidade" class="a11y-toggle" id="a11y-toggle">
+        <i class="ph ph-wheelchair icone-grande"></i>
+      </button>
+      <div aria-hidden="true" class="a11y-menu" id="a11y-menu">
+        <div class="a11y-menu-header">
+          <span>Acessibilidade</span>
+          <button aria-label="Fechar menu de acessibilidade" class="a11y-fechar" id="a11y-fechar">
+            <i class="ph ph-x"></i>
+          </button>
+        </div>
+        <div class="a11y-opcoes">
+          <div class="a11y-fonte-grupo">
+            <button aria-label="Aumentar fonte" class="a11y-btn a11y-btn-fonte" id="btn-fonte-aumentar">
+              A+
+            </button>
+            <button aria-label="Diminuir fonte" class="a11y-btn a11y-btn-fonte" id="btn-fonte-diminuir">
+              A-
+            </button>
+          </div>
+
+          <!-- Filtros de Cor -->
+          <button class="a11y-btn" id="btn-alto-contraste" aria-pressed="false">
+            <i class="ph ph-circle-half-tilt" aria-hidden="true"></i> Alto Contraste
+          </button>
+          <button class="a11y-btn" id="btn-daltonismo" aria-pressed="false">
+            <i class="ph ph-eye" aria-hidden="true"></i> Escala de Cinza
+          </button>
+          <details class="a11y-dropdown">
+            <summary class="a11y-btn a11y-dropdown-summary">
+              <div><i class="ph ph-drop" aria-hidden="true"></i> Filtros de Daltonismo</div>
+              <i class="ph ph-caret-down a11y-dropdown-icon" aria-hidden="true"></i>
+            </summary>
+            <div class="a11y-dropdown-content">
+              <button class="a11y-btn a11y-btn-sub" id="btn-protanopia" aria-pressed="false">
+                Protanopia
+              </button>
+              <button class="a11y-btn a11y-btn-sub" id="btn-deuteranopia" aria-pressed="false">
+                Deuteranopia
+              </button>
+              <button class="a11y-btn a11y-btn-sub" id="btn-tritanopia" aria-pressed="false">
+                Tritanopia
+              </button>
+            </div>
+          </details>
+
+          <!-- Ferramentas Visuais -->
+          <button class="a11y-btn" id="btn-animacoes">
+            <i class="ph ph-play-pause" aria-hidden="true"></i> Pausar Animações
+          </button>
+          <button class="a11y-btn" id="btn-dislexia">
+            <i class="ph ph-text-t" aria-hidden="true"></i> Fonte para Dislexia
+          </button>
+          <button class="a11y-btn" id="btn-espacamento">
+            <i class="ph ph-text-align-justify" aria-hidden="true"></i> Espaçamento
+          </button>
+          <button class="a11y-btn" id="btn-cursor">
+            <i class="ph ph-cursor" aria-hidden="true"></i> Cursor Grande
+          </button>
+          <button class="a11y-btn" id="btn-mascara">
+            <i class="ph ph-mask-happy" aria-hidden="true"></i> Máscara de Leitura
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- ======================================
+       Modal Bem-Vindo
+       ====================================== -->
+    <div class="modal-bem-vindo-overlay" id="modal-bem-vindo">
+      <div class="modal-bem-vindo-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-bem-vindo">
+        <button class="modal-fechar" id="modal-btn-fechar" aria-label="Fechar modal">
+          <i class="ph ph-x"></i>
+        </button>
+        <div class="modal-grid">
+          <div class="modal-imagem-container">
+            <img src="assets/images/webp/banner_trajetoria.webp"
+              alt="Augusto Duarte olhando para o alto com os punhos fechados com a bandeira do Brasil e a bandeira do estado de São Paulo cada uma em um ombro." />
+          </div>
+          <div class="modal-info">
+            <span class="modal-tag">Por um Estado mais Forte</span>
+            <div class="cartao-voto-animado">
+              <div class="cartao-voto-conteudo">
+                <h2 class="modal-titulo" id="modal-titulo-bem-vindo">
+                  Vote<br />Augusto Duarte<br /><span class="modal-cargo">DEPUTADO ESTADUAL</span>
+                  <span class="modal-numero-urna">30633</span>
+                </h2>
+              </div>
+            </div>
+            <p class="modal-obrigado-texto">Obrigado por acessar nosso site. Conheça nossa trajetória, valores e o
+              projeto para transformar a Baixada Santista e São Paulo.</p>
+            <div class="modal-botoes">
+              <a href="#" class="botao-azul flex-1 text-center-flex" id="modal-btn-continuar">
+                Continuar para o site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Plugins de Terceiros -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <!-- Scripts Nativos -->
+    <!-- ======================================
+       Modal de Obrigado Voluntário
+       ====================================== -->
+    <div class="modal-bem-vindo-overlay" id="modal-obrigado-voluntario">
+      <div class="modal-bem-vindo-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-obrigado">
+        <button class="modal-fechar" id="modal-btn-fechar-obrigado" aria-label="Fechar modal">
+          <i class="ph ph-x"></i>
+        </button>
+        <div class="modal-grid">
+          <div class="modal-imagem-container">
+            <img src="assets/images/webp/banner_voluntario.webp"
+              alt="Augusto Duarte com os punhos cerrados vibrando em pose de determinação." />
+          </div>
+          <div class="modal-info">
+            <span class="modal-tag">Obrigado por participar!</span>
+            <div class="cartao-voto-animado">
+              <div class="cartao-voto-conteudo">
+                <h2 class="modal-titulo" id="modal-titulo-obrigado">
+                  Vote<br />Augusto Duarte<br /><span class="modal-cargo">DEPUTADO ESTADUAL</span>
+                  <span class="modal-numero-urna">30633</span>
+                </h2>
+              </div>
+            </div>
+            <p class="modal-obrigado-texto">Agradecemos o seu apoio à nossa campanha. Juntos vamos mais longe!</p>
+            <div class="modal-botoes modal-obrigado-botoes">
+              <a href="#" class="botao-azul flex-1 text-center-flex" id="modal-btn-continuar-obrigado">
+                Continuar para o site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="assets/js/menu.js"></script>
+    <script defer src="assets/js/modal.js"></script>
+    <script defer src="assets/js/acessibilidade.js"></script>
+    <script defer src="assets/js/animations.js"></script>
+    <script defer src="assets/js/lgpd.js"></script>
+    <script defer src="assets/js/voluntario.js"></script>
+
+</body>
+
+</html>

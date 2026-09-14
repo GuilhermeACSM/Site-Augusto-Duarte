@@ -1,0 +1,460 @@
+﻿/* ======================================
+   VOLUNTARIO.CSS
+   Estilos específicos da página de Voluntário
+   ====================================== */
+/* ======================================
+   Banner Voluntário
+   ====================================== */
+/* ======================================
+   Conteúdo Voluntário (Grid Principal)
+   ====================================== */
+.voluntario-conteudo-secao {
+    padding-block: var(--space-16);
+}
+.ouvidoria-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-16);
+}
+@media (min-width: 992px) { 
+    .ouvidoria-grid {
+        grid-template-columns: 1fr 1.2fr;
+        gap: var(--space-20);
+        align-items: start;
+    }
+}
+/* ======================================
+   Como Você Pode Ajudar
+   ====================================== */
+/* Aviso Card no formulário de depoimentos */
+.aviso-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    background-color: rgba(30, 58, 138, 0.05); /* Fundo azul bem clarinho */
+    border-left: 4px solid var(--color-primary);
+    padding: var(--space-4);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin-bottom: var(--space-6);
+}
+.aviso-card i {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-top: 2px; flex-shrink: 0;
+}
+.aviso-card p {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.5;
+}
+.como-ajudar-titulo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-8);
+    text-transform: uppercase;
+}
+.como-ajudar-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-8) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+.como-ajudar-lista li {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+}
+.como-ajudar-lista i {
+    color: var(--novo-orange);
+    font-size: 1.5rem;
+    margin-top: 2px; flex-shrink: 0;
+}
+.como-ajudar-lista h3 {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+    margin: 0 0 var(--space-1) 0;
+    text-transform: uppercase;
+}
+.como-ajudar-lista p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 0;
+}
+.como-ajudar-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+}
+.botao-social {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-full);
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.875rem;
+    color: var(--novo-white);
+    background: var(--novo-orange);
+    text-decoration: none;
+    transition: background var(--transition), transform var(--transition);
+}
+.botao-social i {
+    color: var(--novo-white);
+    margin-top: 0;
+    font-size: 1.125rem;
+}
+@media (hover: hover) {
+    .botao-social:hover {
+        background: #d65916;
+        transform: translateY(-2px);
+    }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+/* Aviso Card no formulário de depoimentos */
+.aviso-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    background-color: rgba(30, 58, 138, 0.05); /* Fundo azul bem clarinho */
+    border-left: 4px solid var(--color-primary);
+    padding: var(--space-4);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin-bottom: var(--space-6);
+}
+.aviso-card i {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-top: 2px; flex-shrink: 0;
+}
+.aviso-card p {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.5;
+}
+.como-ajudar-titulo {
+        text-align: center;
+    }
+    .como-ajudar-lista li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-2);
+    }
+    .como-ajudar-lista li > i:first-child {
+        margin-top: 0;
+    }
+    .como-ajudar-botoes {
+        justify-content: center;
+    }
+}
+@media (max-width: 575px) {
+    .botao-social .texto-social {
+        display: none;
+    }
+    .botao-social {
+        padding: var(--space-3);
+    }
+    .botao-social i {
+        font-size: 1.5rem;
+    }
+}
+/* ======================================
+   Cadastro de Voluntário (Formulário)
+   ====================================== */
+.cadastro-voluntario {
+    background: var(--novo-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+}
+.cadastro-titulo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-6);
+    text-transform: uppercase;
+}
+.form-voluntario input[type="text"],
+.form-voluntario input[type="email"],
+.form-voluntario input[type="tel"],
+.form-voluntario textarea {
+    width: 100%;
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    background: var(--novo-white);
+    outline: none;
+    transition: border-color var(--transition);
+    resize: vertical;
+}
+.form-voluntario input:focus,
+.form-voluntario textarea:focus {
+    border-color: var(--novo-orange);
+}
+/* Validação Visual: Erro */
+.form-voluntario input:not(:placeholder-shown):invalid,
+.form-voluntario textarea:not(:placeholder-shown):invalid {
+    border-color: #e53e3e; /* Vermelho */
+    background-color: #fff5f5;
+}
+/* Validação Visual: Sucesso */
+.form-voluntario input:not(:placeholder-shown):valid,
+.form-voluntario textarea:not(:placeholder-shown):valid {
+    border-color: #38a169; /* Verde */
+}
+.form-voluntario input::placeholder,
+.form-voluntario textarea::placeholder {
+    color: var(--color-muted);
+}
+.form-linha {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+@media (min-width: 576px) {
+    .form-linha {
+        flex-direction: row;
+    }
+}
+.form-linha .form-grupo {
+    flex: 1;
+    margin-bottom: 0;
+}
+.form-grupo {
+    margin-bottom: var(--space-4);
+}
+/* ======================================
+   Checkboxes Expansivos
+   ====================================== */
+.botoes-expansivos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+@media (min-width: 576px) {
+    .botoes-expansivos {
+        flex-direction: row;
+    }
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    cursor: pointer;
+    user-select: none;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--novo-white);
+    flex: 1;
+    transition: border-color var(--transition);
+}
+.checkbox-container:hover {
+    border-color: var(--color-secondary);
+}
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkbox-container .checkmark {
+    height: 20px;
+    width: 20px;
+    background-color: var(--novo-white);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.checkbox-container input:checked~.checkmark {
+    background-color: var(--novo-white);
+}
+.checkbox-container input:checked~.checkmark:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid var(--color-secondary);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+}
+.checkbox-label {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+}
+.conteudo-expansivo-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-voluntario:has(#check-ajudar:checked) #wrapper-ajudar {
+    grid-template-rows: 1fr;
+}
+.form-voluntario:has(#check-mensagem:checked) #wrapper-mensagem {
+    grid-template-rows: 1fr;
+}
+.conteudo-expansivo-inner {
+    overflow: hidden;
+}
+.conteudo-expansivo {
+    padding-bottom: var(--space-6);
+}
+.expansivo-titulo {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 1.125rem;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-4);
+    text-transform: uppercase;
+}
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+}
+@media (min-width: 576px) {
+    .checkbox-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.checkbox-simples {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    cursor: pointer;
+    font-size: 0.9375rem;
+    color: var(--color-secondary);
+    user-select: none;
+}
+.checkbox-simples input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.checkbox-simples .checkmark {
+    height: 18px;
+    width: 18px;
+    background-color: var(--novo-white);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.checkbox-simples input:checked~.checkmark {
+    background-color: var(--novo-white);
+}
+.checkbox-simples input:checked~.checkmark:after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 9px;
+    border: solid var(--color-secondary);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+}
+/* ======================================
+   Botão Enviar Form
+   ====================================== */
+.botao-submit {
+    width: 100%;
+    background: var(--novo-orange);
+    color: var(--novo-white);
+    border: none;
+    padding: var(--space-4);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+@media (hover: hover) {
+    .botao-submit:hover {
+        background: #d65916;
+    }
+}
+/* ======================================
+   FAQ Accordion Unificado
+   ====================================== */
+.faq-accordion { display: flex; flex-direction: column; gap: var(--space-4); }
+.faq-item {
+    background: var(--novo-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: box-shadow var(--transition), border-color var(--transition);
+}
+.faq-item:hover {
+    border-color: var(--color-primary);
+}
+.faq-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) var(--space-5);
+    background: transparent;
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--color-text);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+.faq-btn:hover {
+    color: var(--color-primary);
+    background: rgba(30, 58, 138, 0.02);
+}
+.faq-btn:focus-visible {
+    outline: 3px solid var(--novo-orange);
+    outline-offset: -3px;
+}
+.faq-btn[aria-expanded='true'] {
+    color: var(--color-primary);
+    background: rgba(30, 58, 138, 0.04);
+}
+.faq-btn i {
+    font-size: 1.25rem;
+    transition: transform 0.3s;
+    color: var(--color-text);
+}
+.faq-btn[aria-expanded='true'] i {
+    transform: rotate(180deg);
+    color: var(--color-primary);
+}
+.faq-painel {
+    padding: 0 var(--space-5) var(--space-5) var(--space-5);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: rgba(30, 58, 138, 0.04);
+    border-top: none;
+}
