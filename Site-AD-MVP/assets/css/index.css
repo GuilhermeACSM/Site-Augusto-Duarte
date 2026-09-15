@@ -328,54 +328,6 @@
   }
 }
 
-/* ======================================
-   Chamada para Ação (CTA)
-   ====================================== */
-.secao-chamada {
-  padding-block: var(--space-24);
-}
-
-.faixa-chamada {
-  text-align: center;
-}
-
-.faixa-chamada-tag {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  text-align: center;
-  width: 100%;
-  color: var(--color-secondary);
-  display: block;
-  margin-bottom: var(--space-5);
-  text-transform: uppercase;
-}
-
-.faixa-chamada-titulo {
-  font-size: clamp(2rem, 5vw, 3.75rem);
-  margin-bottom: var(--space-5);
-  color: var(--novo-white);
-  max-width: 640px;
-  margin-inline: auto;
-  text-align: center;
-  width: 100%;
-}
-
-.faixa-chamada-descricao {
-  font-size: 1.0625rem;
-  opacity: 0.95;
-  margin-bottom: var(--space-8);
-  max-width: 608px;
-  margin-inline: auto;
-}
-
-.faixa-chamada-botoes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-4);
-}
 
 /* ======================================
    Responsividade — Desktop (>= 1024px)
