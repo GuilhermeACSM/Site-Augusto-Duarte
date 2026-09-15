@@ -465,7 +465,7 @@ html.theme-high-contrast button {
   color: #ff7700;
 }
 
-html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook) {
+html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook, .botao-escuro, .botao-contorno-escuro, .botao-whatsapp, .botao-azul, .botao-submit, .link-seta, .botao-social) {
   background-color: #000000;
   background-image: none;
   color: #ff7700;
@@ -474,12 +474,12 @@ html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno
   transition: all 0.2s ease;
 }
 
-html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) {
+html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook, .botao-escuro, .botao-contorno-escuro, .botao-whatsapp, .botao-azul, .botao-submit, .link-seta, .botao-social):is(:hover, :focus) {
   background-color: #ff7700;
   color: #000000;
 }
 
-html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) * {
+html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook, .botao-escuro, .botao-contorno-escuro, .botao-whatsapp, .botao-azul, .botao-submit, .link-seta, .botao-social):is(:hover, :focus) * {
   color: #000000;
 }
 
@@ -607,7 +607,7 @@ html.theme-high-contrast-light button {
   color: #002b49;
 }
 
-html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook) {
+html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook, .botao-escuro, .botao-contorno-escuro, .botao-whatsapp, .botao-azul, .botao-submit, .link-seta, .botao-social) {
   background-color: #FFFFFF;
   background-image: none;
   color: #002b49;
@@ -616,12 +616,12 @@ html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-co
   transition: all 0.2s ease;
 }
 
-html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) {
+html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook, .botao-escuro, .botao-contorno-escuro, .botao-whatsapp, .botao-azul, .botao-submit, .link-seta, .botao-social):is(:hover, :focus) {
   background-color: #002b49;
   color: #FFFFFF;
 }
 
-html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) * {
+html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook, .botao-escuro, .botao-contorno-escuro, .botao-whatsapp, .botao-azul, .botao-submit, .link-seta, .botao-social):is(:hover, :focus) * {
   color: #FFFFFF;
 }
 
@@ -840,6 +840,10 @@ body.alto-contraste .a11y-skip-link {
   .texto-a11y-btn {
     display: none;
   }
+}
+
+body.fonte-aumentada .texto-a11y-btn {
+  display: none;
 }
 
 @media (min-width: 880px) and (max-width: 992px) {

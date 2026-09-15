@@ -111,7 +111,8 @@
         </span>
       </a>
       <div class="cabecalho-acoes">
-        <a class="botao-principal visivel-header" href="voluntario.html" id="cabecalho-cta">Junte-se à Campanha</a>
+        <a class="botao-principal visivel-header" href="voluntario.html" id="cabecalho-cta"> <i aria-hidden="true"
+            class="ph ph-user-plus icone-pequeno"></i> Junte-se à Campanha </a>
         <button aria-controls="nav-mobile" aria-expanded="false" aria-label="Abrir menu" class="botao-menu">
           <span class="botao-menu-texto">MENU</span>
           <div class="botao-menu-barras">
@@ -137,7 +138,8 @@
           <a href="privacidade.html">Privacidade</a>
         </div>
         <div class="nav-mobile-acoes">
-          <a class="botao-principal btn-mobile-junte-se" href="voluntario.html">Junte-se à Campanha</a>
+          <a class="botao-principal btn-mobile-junte-se" href="voluntario.html"> <i aria-hidden="true"
+              class="ph ph-user-plus icone-pequeno"></i> Junte-se à Campanha </a>
         </div>
       </div>
     </nav>
@@ -194,7 +196,8 @@
         <header class="secao-cabecalho reveal" role="banner">
           <span class="secao-tag">NO LEGISLATIVO</span>
           <h2 class="secao-titulo" id="legislativo-titulo-id">LEIS DE AUTORIA EM VIGOR</h2>
-          <p class="secao-intro">Conheça as principais leis aprovadas que impactam diretamente a vida do cidadão santista.</p>
+          <p class="secao-intro">Conheça as principais leis aprovadas que impactam diretamente a vida do cidadão
+            santista.</p>
         </header>
         <div class="lei-grade">
           <!-- Card 1: Avenida Rei Pelé -->
@@ -285,7 +288,8 @@
         <header class="secao-cabecalho reveal" role="banner">
           <span class="secao-tag">NO LEGISLATIVO</span>
           <h2 class="secao-titulo" id="projetos-titulo-id">PROJETOS E INICIATIVAS</h2>
-          <p class="secao-intro">Propostas e ações em andamento para construir uma cidade mais segura, justa e transparente.</p>
+          <p class="secao-intro">Propostas e ações em andamento para construir uma cidade mais segura, justa e
+            transparente.</p>
         </header>
         <div class="lei-grade">
           <article class="lei-card">
@@ -476,7 +480,8 @@
     <section aria-labelledby="cta-title" class="secao secao-destaque secao-chamada">
       <div class="container faixa-chamada reveal-scale">
         <span class="faixa-chamada-tag">NOVO: A Gente Respeita o Brasil</span>
-        <h2 class="faixa-chamada-titulo" id="cta-title">Junte-se à Campanha</h2>
+        <h2 class="faixa-chamada-titulo" id="cta-title"> <i aria-hidden="true"
+            class="ph ph-user-plus icone-pequeno"></i> Junte-se à Campanha </h2>
         <p class="faixa-chamada-descricao">
           A campanha é feita por gente que acredita. Sem fundo partidário público, sem privilégios. Só trabalho.
         </p>
@@ -603,6 +608,8 @@
     <!-- ======================================
          Menu de Acessibilidade
          ====================================== -->
+
+
     <div class="a11y-widget" id="a11y-widget">
       <button aria-expanded="false" aria-label="Abrir menu de acessibilidade" class="a11y-toggle" id="a11y-toggle">
         <i class="ph ph-wheelchair icone-grande"></i>
@@ -616,33 +623,48 @@
         </div>
         <div class="a11y-opcoes">
           <div class="a11y-fonte-grupo">
-            <button aria-label="Aumentar fonte" class="a11y-btn a11y-btn-fonte" id="btn-fonte-aumentar">
-              A+
-            </button>
-            <button aria-label="Diminuir fonte" class="a11y-btn a11y-btn-fonte" id="btn-fonte-diminuir">
-              A-
-            </button>
+            <button aria-label="Aumentar fonte" class="a11y-btn a11y-btn-fonte" id="btn-fonte-aumentar">A+</button>
+            <button aria-label="Diminuir fonte" class="a11y-btn a11y-btn-fonte" id="btn-fonte-diminuir">A-</button>
           </div>
-          <button class="a11y-btn" id="btn-alto-contraste">
-            <i class="ph ph-circle-half-tilt"></i> Alto Contraste
+
+          <button class="a11y-btn" id="btn-alto-contraste" aria-pressed="false">
+            <i class="ph ph-moon" aria-hidden="true"></i> Alto Contraste Escuro
           </button>
-          <button class="a11y-btn" id="btn-animacoes">
-            <i class="ph ph-play-pause"></i> Pausar Animações
+          <button class="a11y-btn" id="btn-alto-contraste-claro" aria-pressed="false">
+            <i class="ph ph-sun" aria-hidden="true"></i> Alto Contraste Claro
           </button>
-          <button class="a11y-btn" id="btn-dislexia">
-            <i class="ph ph-text-t"></i> Fonte para Dislexia
+          <button class="a11y-btn" id="btn-daltonismo" aria-pressed="false">
+            <i class="ph ph-eye" aria-hidden="true"></i> Escala de Cinza
           </button>
-          <button class="a11y-btn" id="btn-espacamento">
-            <i class="ph ph-text-align-justify"></i> Espaçamento
+
+          <details class="a11y-dropdown">
+            <summary class="a11y-btn a11y-dropdown-summary">
+              <div><i class="ph ph-drop" aria-hidden="true"></i> Filtros de Daltonismo</div>
+              <i class="ph ph-caret-down a11y-dropdown-icon" aria-hidden="true"></i>
+            </summary>
+            <div class="a11y-dropdown-content">
+              <button class="a11y-btn a11y-btn-sub" id="btn-protanopia" aria-pressed="false">Protanopia</button>
+              <button class="a11y-btn a11y-btn-sub" id="btn-deuteranopia" aria-pressed="false">Deuteranopia</button>
+              <button class="a11y-btn a11y-btn-sub" id="btn-tritanopia" aria-pressed="false">Tritanopia</button>
+            </div>
+          </details>
+          <button class="a11y-btn" id="btn-dislexia" aria-pressed="false">
+            <i class="ph ph-text-aa" aria-hidden="true"></i> Fonte para Dislexia
           </button>
-          <button class="a11y-btn" id="btn-cursor">
-            <i class="ph ph-cursor"></i> Cursor Grande
+          <button class="a11y-btn" id="btn-destacar-links" aria-pressed="false">
+            <i class="ph ph-link" aria-hidden="true"></i> Destacar Links
           </button>
-          <button class="a11y-btn" id="btn-mascara">
-            <i class="ph ph-mask-happy"></i> Máscara de Leitura
+          <button class="a11y-btn" id="btn-espacamento" aria-pressed="false">
+            <i class="ph ph-text-align-justify" aria-hidden="true"></i> Espaçamento de Texto
           </button>
-          <button class="a11y-btn" id="btn-daltonismo">
-            <i class="ph ph-eye"></i> Escala de Cinza
+          <button class="a11y-btn" id="btn-animacoes" aria-pressed="false">
+            <i class="ph ph-play-pause" aria-hidden="true"></i> Pausar Animações
+          </button>
+          <button class="a11y-btn" id="btn-cursor" aria-pressed="false">
+            <i class="ph ph-cursor" aria-hidden="true"></i> Cursor Grande
+          </button>
+          <button class="a11y-btn" id="btn-mascara" aria-pressed="false">
+            <i class="ph ph-mask-happy" aria-hidden="true"></i> Máscara de Leitura
           </button>
         </div>
       </div>
@@ -663,19 +685,20 @@
           <div class="modal-info">
             <span class="modal-tag">Por um Estado mais Forte</span>
             <div class="cartao-voto-animado">
-            <div class="cartao-voto-conteudo">
-              <h2 class="modal-titulo" id="modal-titulo-bem-vindo">
-                Vote<br />Augusto Duarte<br /><span class="modal-cargo">DEPUTADO ESTADUAL</span>
-                <span class="modal-numero-urna">30633</span>
-              </h2>
+              <div class="cartao-voto-conteudo">
+                <h2 class="modal-titulo" id="modal-titulo-bem-vindo">
+                  Vote<br />Augusto Duarte<br /><span class="modal-cargo">DEPUTADO ESTADUAL</span>
+                  <span class="modal-numero-urna">30633</span>
+                </h2>
+              </div>
             </div>
-          </div>
-          <p class="modal-obrigado-texto">Obrigado por acessar nosso site. Conheça nossa trajetória, valores e o projeto para transformar a Baixada Santista e São Paulo.</p>
-          <div class="modal-botoes">
-            <a href="#" class="botao-azul flex-1 text-center-flex" id="modal-btn-continuar">
-              Continuar para o site
-            </a>
-          </div>
+            <p class="modal-obrigado-texto">Obrigado por acessar nosso site. Conheça nossa trajetória, valores e o
+              projeto para transformar a Baixada Santista e São Paulo.</p>
+            <div class="modal-botoes">
+              <a href="#" class="botao-azul flex-1 text-center-flex" id="modal-btn-continuar">
+                Continuar para o site
+              </a>
+            </div>
           </div>
         </div>
       </div>

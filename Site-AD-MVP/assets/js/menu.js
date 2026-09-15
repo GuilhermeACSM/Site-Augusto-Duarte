@@ -121,4 +121,23 @@
       ultimoScroll = scrollAtual <= 0 ? 0 : scrollAtual;
     }, { passive: true });
   }
+
+  // Intersection Observer para o botão do cabeçalho
+  var cabecalhoCta = document.getElementById('cabecalho-cta');
+  var heroCta = document.getElementById('hero-cta-btn');
+  
+  if (cabecalhoCta && heroCta) {
+    // Começa oculto por padrão (a animação de saída/entrada cuidará de mostrar quando rolar)
+    cabecalhoCta.classList.add('oculto-header');
+
+    var ctaObserver = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting) {
+        cabecalhoCta.classList.add('oculto-header');
+      } else {
+        cabecalhoCta.classList.remove('oculto-header');
+      }
+    }, { rootMargin: "-80px 0px 0px 0px", threshold: 0 }); // -80px is the header height
+    
+    ctaObserver.observe(heroCta);
+  }
 })();
