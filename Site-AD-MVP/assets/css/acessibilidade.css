@@ -466,21 +466,21 @@ html.theme-high-contrast button {
 }
 
 html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook) {
-  background-color: #000000 !important;
-  background-image: none !important;
-  color: #ff7700 !important;
-  border: 1px solid #ff7700 !important;
+  background-color: #000000;
+  background-image: none;
+  color: #ff7700;
+  border: 1px solid #ff7700;
   box-sizing: border-box;
   transition: all 0.2s ease;
 }
 
 html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) {
-  background-color: #ff7700 !important;
-  color: #000000 !important;
+  background-color: #ff7700;
+  color: #000000;
 }
 
 html.theme-high-contrast:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) * {
-  color: #000000 !important;
+  color: #000000;
 }
 
 html.theme-high-contrast:root body .a11y-btn.ativo,
@@ -608,21 +608,21 @@ html.theme-high-contrast-light button {
 }
 
 html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook) {
-  background-color: #FFFFFF !important;
-  background-image: none !important;
-  color: #002b49 !important;
-  border: 1px solid #002b49 !important;
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #002b49;
+  border: 1px solid #002b49;
   box-sizing: border-box;
   transition: all 0.2s ease;
 }
 
 html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) {
-  background-color: #002b49 !important;
-  color: #FFFFFF !important;
+  background-color: #002b49;
+  color: #FFFFFF;
 }
 
 html.theme-high-contrast-light:root body :is(button, .botao-principal, .botao-contorno, .a11y-btn, .a11y-topbar-btn, .a11y-skip-link, .botao-instagram, .botao-facebook):is(:hover, :focus) * {
-  color: #FFFFFF !important;
+  color: #FFFFFF;
 }
 
 html.theme-high-contrast-light:root body .a11y-btn.ativo,
@@ -864,41 +864,44 @@ body.alto-contraste .a11y-skip-link {
    Destacar Links
    ====================================== */
 html:root body:is(.destacar-links, .links-destacados) :is(main, nav, footer, header, section, article, div, p, li) a:not(.cabecalho-logo):not(.a11y-skip-link):not(.a11y-btn):not(.a11y-toggle):not(.a11y-topbar-btn):not(.botao-whatsapp):not(.btn-fechar):not(.modal-overlay *) {
-  background-color: #ffeb3b !important;
-  background-image: none !important;
-  color: #000000 !important;
-  text-decoration: underline !important;
-  text-decoration-thickness: 2px !important;
-  text-underline-offset: 3px !important;
-  font-weight: 700 !important;
-  outline: 2px solid #000000 !important;
-  outline-offset: 1px !important;
-  border-radius: 2px !important;
+  background-color: #ffeb3b;
+  background-image: none;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  outline: 2px solid #000000;
+  outline-offset: 1px;
+  border-radius: 2px;
 }
 
 html:root body:is(.destacar-links, .links-destacados) :is(main, nav, footer, header, section, article, div, p, li) a:not(.cabecalho-logo):not(.a11y-skip-link):not(.a11y-btn):not(.a11y-toggle):not(.a11y-topbar-btn):not(.botao-whatsapp):not(.btn-fechar):not(.modal-overlay *) * {
-  color: #000000 !important;
+  color: #000000;
 }
 
 html:root body:is(.destacar-links, .links-destacados) :is(main, nav, footer, header, section, article, div, p, li) a:not(.cabecalho-logo):not(.a11y-skip-link):not(.a11y-btn):not(.a11y-toggle):not(.a11y-topbar-btn):not(.botao-whatsapp):not(.btn-fechar):not(.modal-overlay *):hover {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  outline: 2px solid #ffeb3b !important;
-  box-shadow: 0 0 0 2px #000000 !important;
+  background-color: #000000;
+  color: #ffffff;
+  outline: 2px solid #ffeb3b;
+  box-shadow: 0 0 0 2px #000000;
 }
 
 html:root body:is(.destacar-links, .links-destacados) :is(main, nav, footer, header, section, article, div, p, li) a:not(.cabecalho-logo):not(.a11y-skip-link):not(.a11y-btn):not(.a11y-toggle):not(.a11y-topbar-btn):not(.botao-whatsapp):not(.btn-fechar):not(.modal-overlay *):hover * {
-  color: #ffffff !important;
+  color: #ffffff;
 }
+
 /* Ajuste de Contraste para o Tooltip de Acessibilidade */
 html.theme-high-contrast .a11y-tooltip {
   background-color: #000000;
   color: #ffffff;
   border-color: #ff7700;
 }
+
 html.theme-high-contrast .a11y-tooltip strong {
   color: #ff7700;
 }
+
 html.theme-high-contrast .a11y-tooltip::after {
   border-top-color: #ff7700;
 }
@@ -908,9 +911,11 @@ html.theme-high-contrast-light .a11y-tooltip {
   color: #000000;
   border-color: #002b49;
 }
+
 html.theme-high-contrast-light .a11y-tooltip strong {
   color: #002b49;
 }
+
 html.theme-high-contrast-light .a11y-tooltip::after {
   border-top-color: #002b49;
 }
