@@ -1,4 +1,4 @@
-﻿/* ======================================
+/* ======================================
    MODAL BEM-VINDO (PRIMEIRA VISITA)
    ====================================== */
 .modal-bem-vindo-overlay {
@@ -143,7 +143,7 @@
 }
 
 /* Responsividade para Desktop */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .modal-grid {
     flex-direction: row;
   }
@@ -227,7 +227,7 @@
 }
 
 /* Responsividade do Modal para Celulares */
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .modal-titulo {
     font-size: 2.2rem;
   }
@@ -249,7 +249,7 @@
 }
 
 /* --- Otimizaes do Modal para Mobile --- */
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .modal-bem-vindo-conteudo {
     max-height: 90vh;
     overflow-y: auto;
@@ -268,9 +268,9 @@
   }
 
   .modal-numero-urna {
-    font-size: 2.8rem;
-    padding: 0.2rem 1rem;
-    margin: 0.5rem 0;
+    font-size: 2.2rem;
+    padding: 0.3rem 1rem;
+    margin: 1rem 0 0.5rem 0;
   }
 
   .modal-titulo {
@@ -376,8 +376,9 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .modal-cargo {
     font-size: 0.875rem;
+    margin-bottom: 5px;
   }
 }
