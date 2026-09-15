@@ -46,6 +46,8 @@
   <link href="assets/css/acessibilidade.css?v=8" rel="stylesheet" />
   <link href="assets/css/loader.css" rel="stylesheet" />
   <link href="assets/css/modal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/skeleton.css">
+  <script defer src="assets/js/skeleton.js"></script>
 </head>
 
 <body>
@@ -125,6 +127,39 @@
     </nav>
   </header>
   <main id="conteudo-principal" role="main">
+
+  
+  <!-- Skeleton Loading -->
+  <div id="skeleton-container" class="skeleton-wrapper" aria-hidden="true">
+    <div class="container">
+      <div class="skeleton skeleton-breadcrumb"></div>
+    </div>
+    
+    <section class="banner-privacidade skeleton-dark-bg">
+      <div class="container banner-conteudo" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div class="skeleton skeleton-title" style="width: 150px; height: 1.5rem; margin-bottom: 1rem; border-radius: 4px;"></div>
+        <div class="skeleton skeleton-title" style="width: 50%; height: 4rem; margin-bottom: 2rem;"></div>
+        <div class="skeleton skeleton-text medium" style="margin-bottom: 0.5rem; width: 80%;"></div>
+        <div class="skeleton skeleton-text short"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" style="max-width: 800px; margin: 0 auto; padding: 2rem 0;">
+        <div class="skeleton skeleton-text short" style="margin-bottom: 3rem;"></div>
+        <div class="skeleton skeleton-text"></div>
+        <div class="skeleton skeleton-text medium" style="margin-bottom: 3rem;"></div>
+        <div class="skeleton skeleton-title" style="height: 2rem; width: 40%; margin-top: 2rem;"></div>
+        <div class="skeleton skeleton-text"></div>
+        <div class="skeleton skeleton-text"></div>
+        <div class="skeleton skeleton-text medium" style="margin-bottom: 3rem;"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Real Content -->
+  <div id="conteudo-real">
+
     <nav aria-label="Breadcrumb" class="breadcrumb-container">
       <div class="container">
         <ol class="breadcrumb-lista">
@@ -217,7 +252,9 @@
       </div>
     </section>
 
-  </main>
+  
+  </div>
+</main>
 
   <!-- ======================================
        Rodapé (Footer)

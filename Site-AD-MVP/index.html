@@ -51,6 +51,8 @@
   <link href="assets/css/acessibilidade.css" rel="stylesheet" />
   <link href="assets/css/loader.css" rel="stylesheet" />
   <link href="assets/css/modal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/skeleton.css">
+  <script defer src="assets/js/skeleton.js"></script>
 </head>
 
 <body>
@@ -171,6 +173,47 @@
        Main
        ====================================== -->
   <main id="conteudo-principal" role="main">
+
+  
+  <!-- Skeleton Loading -->
+  <div id="skeleton-container" class="skeleton-wrapper" aria-hidden="true">
+    <!-- Hero Section Skeleton -->
+    <section class="banner skeleton-dark-bg" style="min-height: 80vh;">
+      <div class="container banner-conteudo">
+        <div class="banner-texto">
+          <div class="skeleton skeleton-title" style="width: 40%; height: 1.2rem; margin-bottom: 1rem;"></div>
+          <div class="skeleton skeleton-title" style="width: 80%; height: 6rem; margin-bottom: 2rem;"></div>
+          <div class="skeleton skeleton-text medium" style="height: 1.2rem; margin-bottom: 3rem;"></div>
+          
+          <div style="display: flex; gap: 1rem;">
+            <div class="skeleton skeleton-button" style="height: 3.5rem; width: 220px; border-radius: 30px;"></div>
+            <div class="skeleton skeleton-button" style="height: 3.5rem; width: 220px; border-radius: 30px; background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.2);"></div>
+          </div>
+        </div>
+        
+        <div class="banner-imagem" style="display: flex; align-items: flex-end;">
+           <div class="skeleton skeleton-img" style="border-radius: 20px; height: 500px; width: 90%; margin-left: auto; border-bottom-left-radius: 0; border-bottom-right-radius: 0;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards Section Skeleton -->
+    <section style="padding: 4rem 0;">
+      <div class="container">
+        <div class="skeleton skeleton-title" style="width: 40%; height: 3rem; margin: 0 auto 3rem auto; text-align: center;"></div>
+        
+        <div class="skeleton-grid-3-col">
+          <div class="skeleton skeleton-img" style="height: 300px;"></div>
+          <div class="skeleton skeleton-img" style="height: 300px;"></div>
+          <div class="skeleton skeleton-img" style="height: 300px;"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Real Content -->
+  <div id="conteudo-real">
+
     <!-- ======================================
          Banner Principal (Hero)
          ====================================== -->
@@ -530,7 +573,9 @@
         </div>
       </div>
     </section>
-  </main>
+  
+  </div>
+</main>
   <!-- ======================================
        Rodapé (Footer)
        ====================================== -->

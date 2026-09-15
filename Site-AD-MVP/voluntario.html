@@ -50,6 +50,8 @@
   <link href="assets/css/acessibilidade.css?v=8" rel="stylesheet" />
   <link href="assets/css/loader.css" rel="stylesheet" />
   <link href="assets/css/modal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/skeleton.css">
+  <script defer src="assets/js/skeleton.js"></script>
 </head>
 
 <body>
@@ -167,6 +169,52 @@
     </nav>
   </header>
   <main id="conteudo-principal" role="main">
+
+  
+  <!-- Skeleton Loading -->
+  <div id="skeleton-container" class="skeleton-wrapper" aria-hidden="true">
+    <!-- Breadcrumb Skeleton -->
+    <div class="container">
+      <div class="skeleton skeleton-breadcrumb"></div>
+    </div>
+    
+    <!-- Hero Banner Skeleton (Text + Image) -->
+    <section class="banner skeleton-dark-bg">
+      <div class="container banner-conteudo banner-conteudo-centralizado">
+        <div class="banner-texto">
+          <div class="skeleton skeleton-title" style="width: 40%; height: 1.5rem; margin-bottom: 1rem;"></div>
+          <div class="skeleton skeleton-title" style="width: 90%; height: 5rem; margin-bottom: 1.5rem;"></div>
+          <div class="skeleton skeleton-text" style="height: 1.2rem;"></div>
+          <div class="skeleton skeleton-text medium" style="height: 1.2rem; margin-bottom: 2.5rem;"></div>
+        </div>
+        <div class="banner-imagem" style="display: flex; align-items: flex-end;">
+          <div class="skeleton skeleton-img" style="height: 450px; width: 90%; margin-left: auto; border-radius: 20px; border-bottom-left-radius: 0; border-bottom-right-radius: 0;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Generic Section Skeleton (Image + Text) -->
+    <section style="padding: 4rem 0;">
+      <div class="container skeleton-grid-2-col" style="align-items: center;">
+        <div>
+          <div class="skeleton skeleton-img" style="height: 350px; width: 100%; border-radius: 12px;"></div>
+        </div>
+        <div>
+          <div class="skeleton skeleton-title" style="width: 50%; height: 2.5rem; margin-bottom: 1.5rem;"></div>
+          <div class="skeleton skeleton-text" style="height: 1.2rem; margin-bottom: 1rem;"></div>
+          <div class="skeleton skeleton-text" style="height: 1.2rem; margin-bottom: 1rem;"></div>
+          <div class="skeleton skeleton-text medium" style="height: 1.2rem; margin-bottom: 2rem;"></div>
+          
+          <div class="skeleton skeleton-text" style="height: 1.2rem; margin-bottom: 1rem;"></div>
+          <div class="skeleton skeleton-text short" style="height: 1.2rem;"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Real Content -->
+  <div id="conteudo-real">
+
     <!-- ======================================
          Breadcrumb
          ====================================== -->
@@ -329,7 +377,11 @@
     <!-- ======================================
        Rodapé (Footer)
        ====================================== -->
-    <footer class="rodape" role="contentinfo" id="rodape-principal">
+      
+  </div>
+</main>
+
+  <footer class="rodape" role="contentinfo" id="rodape-principal">
       <div class="container rodape-grade">
         <div class="rodape-marca">
           <img alt="Logo Oficial Augusto Duarte - Campanha para Deputado Estadual 30633" class="rodape-logo"

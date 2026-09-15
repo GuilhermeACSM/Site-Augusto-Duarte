@@ -1,0 +1,137 @@
+/* assets/css/skeleton.css */
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: var(--color-background-alt, #f5f5f5);
+  background-image: linear-gradient(90deg, #f5f5f5 0px, #e8e8e8 40px, #f5f5f5 80px);
+  background-size: 1000px 100%;
+  animation: shimmer 2.5s infinite linear;
+  border-radius: 4px;
+}
+
+.skeleton-dark-bg .skeleton {
+  background: rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.25) 40px, rgba(255, 255, 255, 0.1) 80px);
+}
+
+/* Base Skeleton Elements */
+.skeleton-title {
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  width: 60%;
+  border-radius: 8px;
+}
+
+.skeleton-text {
+  height: 1rem;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.skeleton-text.short {
+  width: 40%;
+}
+
+.skeleton-text.medium {
+  width: 75%;
+}
+
+.skeleton-button {
+  height: 3.5rem;
+  width: 220px;
+  border-radius: 30px;
+}
+
+.skeleton-img {
+  height: 100%;
+  width: 100%;
+  min-height: 250px;
+  border-radius: 12px;
+}
+
+.skeleton-avatar {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+/* Page Specific Structures */
+.skeleton-breadcrumb {
+  height: 1.5rem;
+  width: 250px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skeleton-banner-area {
+  padding: 4rem 0;
+  margin-bottom: 2rem;
+  background: var(--color-background-alt, #f9f9f9);
+}
+
+.skeleton-grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.skeleton-grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.skeleton-sidebar-layout {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.skeleton-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.skeleton-main-content {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .skeleton-grid-2-col,
+  .skeleton-grid-3-col,
+  .skeleton-sidebar-layout {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  
+  .skeleton-sidebar {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Utilities */
+.skeleton-wrapper {
+  width: 100%;
+}
+
+#conteudo-real {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#conteudo-real.loaded {
+  display: block;
+  opacity: 1;
+}
