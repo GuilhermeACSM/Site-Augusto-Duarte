@@ -212,6 +212,12 @@
   /* Remove seta padrão */
 }
 
+.a11y-dropdown-summary div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
 .a11y-dropdown-summary::-webkit-details-marker {
   display: none;
 }
@@ -344,6 +350,12 @@ html.theme-protanopia {
   align-items: center;
   list-style: none;
   /* Remove seta padrão */
+}
+
+.a11y-dropdown-summary div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
 .a11y-dropdown-summary::-webkit-details-marker {
